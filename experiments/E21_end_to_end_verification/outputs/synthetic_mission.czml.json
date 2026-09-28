@@ -4,8 +4,8 @@
     "name": "IMPS 임무 시뮬레이션",
     "version": "1.0",
     "clock": {
-      "interval": "2026-09-28T21:00:00Z/2026-09-28T22:10:46Z",
-      "currentTime": "2026-09-28T21:00:00Z",
+      "interval": "2026-09-06T21:00:00Z/2026-09-06T22:10:46Z",
+      "currentTime": "2026-09-06T21:00:00Z",
       "multiplier": 30,
       "range": "LOOP_STOP",
       "step": "SYSTEM_CLOCK_MULTIPLIER"
@@ -107,9 +107,9 @@
   {
     "id": "F-01",
     "name": "Eagle-1 — SYNTH-TGT-01",
-    "availability": "2026-09-28T21:53:16Z/2026-09-28T21:59:02Z",
+    "availability": "2026-09-06T21:53:16Z/2026-09-06T21:59:02Z",
     "position": {
-      "epoch": "2026-09-28T21:00:00Z",
+      "epoch": "2026-09-06T21:00:00Z",
       "cartographicDegrees": [
         3196.986451211003,
         127.02151584650352,
@@ -273,7 +273,7 @@
     "path": {
       "show": [
         {
-          "interval": "2026-09-28T21:53:16Z/2026-09-28T21:59:02Z",
+          "interval": "2026-09-06T21:53:16Z/2026-09-06T21:59:02Z",
           "boolean": true
         }
       ],
@@ -319,9 +319,9 @@
   {
     "id": "missile_F-01",
     "name": "AGM",
-    "availability": "2026-09-28T21:56:06Z/2026-09-28T21:56:14Z",
+    "availability": "2026-09-06T21:56:06Z/2026-09-06T21:56:14Z",
     "position": {
-      "epoch": "2026-09-28T21:56:06Z",
+      "epoch": "2026-09-06T21:56:06Z",
       "cartographicDegrees": [
         0.0,
         127.27622128032687,
@@ -367,7 +367,7 @@
   {
     "id": "explosion_main_F-01",
     "name": "폭발: SYNTH-TGT-01",
-    "availability": "2026-09-28T21:56:14Z/2026-09-28T21:56:32Z",
+    "availability": "2026-09-06T21:56:14Z/2026-09-06T21:56:32Z",
     "position": {
       "cartographicDegrees": [
         127.3,
@@ -377,7 +377,7 @@
     },
     "ellipsoid": {
       "radii": {
-        "epoch": "2026-09-28T21:56:14Z",
+        "epoch": "2026-09-06T21:56:14Z",
         "cartesian": [
           0,
           0,
@@ -409,7 +409,7 @@
       "material": {
         "solidColor": {
           "color": {
-            "epoch": "2026-09-28T21:56:14Z",
+            "epoch": "2026-09-06T21:56:14Z",
             "rgba": [
               0,
               255,
@@ -451,7 +451,7 @@
   {
     "id": "explosion_flash_F-01",
     "name": "충격파",
-    "availability": "2026-09-28T21:56:14Z/2026-09-28T21:56:18Z",
+    "availability": "2026-09-06T21:56:14Z/2026-09-06T21:56:18Z",
     "position": {
       "cartographicDegrees": [
         127.3,
@@ -461,7 +461,7 @@
     },
     "ellipsoid": {
       "radii": {
-        "epoch": "2026-09-28T21:56:14Z",
+        "epoch": "2026-09-06T21:56:14Z",
         "cartesian": [
           0,
           0,
@@ -485,7 +485,7 @@
       "material": {
         "solidColor": {
           "color": {
-            "epoch": "2026-09-28T21:56:14Z",
+            "epoch": "2026-09-06T21:56:14Z",
             "rgba": [
               0,
               255,
@@ -527,7 +527,7 @@
   {
     "id": "destroyed_F-01",
     "name": "타격 완료",
-    "availability": "2026-09-28T21:56:14Z/2026-09-29T00:56:14Z",
+    "availability": "2026-09-06T21:56:14Z/2026-09-07T00:56:14Z",
     "position": {
       "cartographicDegrees": [
         127.3,
@@ -589,9 +589,9 @@
   {
     "id": "RUAV-01",
     "name": "Scout-1 — SYNTH-TGT-01 주변 정찰",
-    "availability": "2026-09-28T21:00:00Z/2026-09-28T21:40:04Z",
+    "availability": "2026-09-06T21:00:00Z/2026-09-06T21:40:04Z",
     "position": {
-      "epoch": "2026-09-28T21:00:00Z",
+      "epoch": "2026-09-06T21:00:00Z",
       "cartographicDegrees": [
         0.0,
         127.03109096735659,
@@ -711,7 +711,7 @@
     "path": {
       "show": [
         {
-          "interval": "2026-09-28T21:00:00Z/2026-09-28T21:40:04Z",
+          "interval": "2026-09-06T21:00:00Z/2026-09-06T21:40:04Z",
           "boolean": true
         }
       ],
@@ -757,9 +757,9 @@
   {
     "id": "RUAV-02",
     "name": "Scout-2 — SYNTH-TGT-01 주변 정찰",
-    "availability": "2026-09-28T21:00:00Z/2026-09-28T22:01:32Z",
+    "availability": "2026-09-06T21:00:00Z/2026-09-06T22:01:32Z",
     "position": {
-      "epoch": "2026-09-28T21:00:00Z",
+      "epoch": "2026-09-06T21:00:00Z",
       "cartographicDegrees": [
         0.0,
         127.03407755964007,
@@ -991,7 +991,7 @@
     "path": {
       "show": [
         {
-          "interval": "2026-09-28T21:00:00Z/2026-09-28T22:01:32Z",
+          "interval": "2026-09-06T21:00:00Z/2026-09-06T22:01:32Z",
           "boolean": true
         }
       ],
@@ -1037,9 +1037,9 @@
   {
     "id": "AUAV-01",
     "name": "Viper-1 — SYNTH-TGT-01",
-    "availability": "2026-09-28T21:43:48Z/2026-09-28T21:52:06Z",
+    "availability": "2026-09-06T21:43:48Z/2026-09-06T21:52:06Z",
     "position": {
-      "epoch": "2026-09-28T21:00:00Z",
+      "epoch": "2026-09-06T21:00:00Z",
       "cartographicDegrees": [
         2628.1469945531885,
         127.02681844243882,
@@ -1147,7 +1147,7 @@
     "path": {
       "show": [
         {
-          "interval": "2026-09-28T21:43:48Z/2026-09-28T21:52:06Z",
+          "interval": "2026-09-06T21:43:48Z/2026-09-06T21:52:06Z",
           "boolean": true
         }
       ],
@@ -1193,9 +1193,9 @@
   {
     "id": "missile_AUAV-01",
     "name": "자폭 돌진",
-    "availability": "2026-09-28T21:52:06Z/2026-09-28T21:52:09Z",
+    "availability": "2026-09-06T21:52:06Z/2026-09-06T21:52:09Z",
     "position": {
-      "epoch": "2026-09-28T21:52:06Z",
+      "epoch": "2026-09-06T21:52:06Z",
       "cartographicDegrees": [
         0.0,
         127.3,
@@ -1241,7 +1241,7 @@
   {
     "id": "explosion_main_AUAV-01",
     "name": "폭발: SYNTH-TGT-01",
-    "availability": "2026-09-28T21:52:09Z/2026-09-28T21:52:23Z",
+    "availability": "2026-09-06T21:52:09Z/2026-09-06T21:52:23Z",
     "position": {
       "cartographicDegrees": [
         127.3,
@@ -1251,7 +1251,7 @@
     },
     "ellipsoid": {
       "radii": {
-        "epoch": "2026-09-28T21:52:09Z",
+        "epoch": "2026-09-06T21:52:09Z",
         "cartesian": [
           0,
           0,
@@ -1283,7 +1283,7 @@
       "material": {
         "solidColor": {
           "color": {
-            "epoch": "2026-09-28T21:52:09Z",
+            "epoch": "2026-09-06T21:52:09Z",
             "rgba": [
               0,
               255,
@@ -1325,7 +1325,7 @@
   {
     "id": "explosion_flash_AUAV-01",
     "name": "충격파",
-    "availability": "2026-09-28T21:52:09Z/2026-09-28T21:52:13Z",
+    "availability": "2026-09-06T21:52:09Z/2026-09-06T21:52:13Z",
     "position": {
       "cartographicDegrees": [
         127.3,
@@ -1335,7 +1335,7 @@
     },
     "ellipsoid": {
       "radii": {
-        "epoch": "2026-09-28T21:52:09Z",
+        "epoch": "2026-09-06T21:52:09Z",
         "cartesian": [
           0,
           0,
@@ -1359,7 +1359,7 @@
       "material": {
         "solidColor": {
           "color": {
-            "epoch": "2026-09-28T21:52:09Z",
+            "epoch": "2026-09-06T21:52:09Z",
             "rgba": [
               0,
               255,
@@ -1401,7 +1401,7 @@
   {
     "id": "destroyed_AUAV-01",
     "name": "파괴",
-    "availability": "2026-09-28T21:52:09Z/2026-09-29T00:52:09Z",
+    "availability": "2026-09-06T21:52:09Z/2026-09-07T00:52:09Z",
     "position": {
       "cartographicDegrees": [
         127.3,

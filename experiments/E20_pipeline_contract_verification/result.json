@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-28T02:07:31.330090+00:00",
+  "generated_at_utc": "2026-09-06T12:20:51.701011+00:00",
   "protocol_sha256": "563e66b724518cf199c9ee92046c5772afbd092041f98c22c72a7fe40cefb025",
   "purpose": "module contract verification; not operational validation",
   "test_history": [
@@ -77,7 +77,7 @@
           "n_attack_uav": 1,
           "total_cost": 28.0,
           "status": "Optimal",
-          "solve_time_ms": 503.69,
+          "solve_time_ms": 298.43,
           "is_feasible": true,
           "utilization": 75
         },
@@ -218,7 +218,7 @@
           "total_cost": 28.0,
           "is_feasible": true,
           "solver_status": "Optimal",
-          "solve_time_ms": 26.44,
+          "solve_time_ms": 19.59,
           "utilization_pct": 75,
           "total_assets": 9
         },
