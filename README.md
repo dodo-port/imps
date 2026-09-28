@@ -69,6 +69,26 @@ flowchart TD
 IMPS는 두 가지로 실행합니다. 임무를 직접 계획해 보려면 3-1의 GUI를, 논문 결과를
 재현하려면 3-2의 검증 실행을 사용하십시오.
 
+### 3-0. 준비 (처음 한 번)
+
+1. **Python 3.13** (검증 환경: 3.13.5)과 **Git**을 설치합니다.
+2. **Git LFS**를 설치합니다(<https://git-lfs.com>). 교리 PDF는 Git LFS로 저장되어 있어,
+   LFS 없이 받으면 PDF 대신 짧은 안내 파일만 내려옵니다. GitHub의 "Download ZIP"도
+   같은 문제가 있으므로 반드시 `git clone`으로 받으십시오.
+3. Windows에서는 긴 파일 이름 오류("Filename too long")를 막기 위해 한 번 설정합니다.
+   ```bash
+   git config --global core.longpaths true
+   ```
+4. 저장소를 받고 가상환경을 만듭니다.
+   ```bash
+   git lfs install
+   git clone https://github.com/dodo-port/imps.git
+   cd imps
+   python -m venv .venv
+   ```
+   가상환경 활성화: Windows는 `.venv\Scripts\activate`, macOS/Linux는
+   `source .venv/bin/activate`.
+
 ### 3-1. 대화형 GUI (사람이 직접 계획할 때)
 
 ```bash
@@ -87,13 +107,30 @@ streamlit run run.py
 
 이 배포로 clone하면 GUI가 그대로 켜집니다. 다만 아래 데이터·서버는 선택 사항입니다.
 
-- **지형 데이터(SRTM)와 3D 기체 모델**은 용량·재배포 문제로 이 배포에서 제외돼
-  있습니다. 없으면 자동으로 평면(가상) 지형으로 대체됩니다. 2D 전술 지도와 경로·편대·
-  검증은 완전히 동작합니다.
-- **Ollama 서버**가 있으면 생성형 명령 해석(qwen)을, 없으면 결정론 규칙 해석을
-  사용합니다. 둘 다 명령 채팅이 동작합니다.
-- **Cesium Ion 토큰**은 3D 지구 타일에만 쓰입니다. 없으면 기본 지도로 대체됩니다.
-  `CESIUM_ION_TOKEN` 환경변수로 넣습니다.
+- **지형 데이터(SRTM)와 3D 기체 모델**은 용량 문제로 이 배포에서 제외돼 있습니다.
+  없으면 자동으로 평면(가상) 지형으로 대체됩니다. 2D 전술 지도와 경로·편대·검증은
+  완전히 동작합니다. 실제 지형을 쓰려면:
+  1. CGIAR-CSI SRTM 90m v4.1(<https://srtm.csi.cgiar.org>)에서 한반도 타일
+     `srtm_62_05`(북위 35~40°)와 `srtm_62_06`(북위 30~35°)의 GeoTIFF를 받습니다.
+  2. 압축을 풀어 `.tif` 파일을 `mission_plan-new_plan_250519/data/terrain/`에 넣습니다.
+  3. `python -m pip install rasterio`로 지형 읽기 패키지를 설치합니다.
+- **Ollama 서버(선택)**가 있으면 생성형 명령 해석을, 없으면 결정론 규칙 해석을
+  사용합니다. 둘 다 명령 채팅이 동작합니다. 생성형 해석을 쓰려면 Ollama
+  (<https://ollama.com>)를 설치하고 논문과 같은 모델을 받습니다.
+  ```bash
+  ollama pull qwen3:14b
+  ```
+  앱은 `qwen2.5:7b`가 설치되어 있으면 그것을 먼저 시도하고, 없으면 `qwen3:14b`를
+  사용합니다.
+- **Cesium Ion 토큰(선택)**: 3D 위성 지형 타일에만 쓰입니다. 없어도 GUI와 재현 시험은
+  모두 동작하며, 3D 화면은 기본 지도로 대체됩니다. 3D 지형을 쓰려면:
+  1. <https://ion.cesium.com> 에 가입(무료)한 뒤 **Access Tokens**에서 토큰을 만듭니다.
+  2. 실행 전에 환경변수로 넣습니다.
+     - PowerShell: `$env:CESIUM_ION_TOKEN="발급받은_토큰"`
+     - macOS/Linux: `export CESIUM_ION_TOKEN="발급받은_토큰"`
+  3. 같은 창에서 `streamlit run run.py`를 실행합니다.
+
+  토큰을 코드나 파일에 적어 커밋하지 마십시오.
 - **"3D 시뮬레이션 시작"은 로컬 실행 전용입니다.** 이 기능은 로컬 브라우저를
   띄우는 방식이라 클라우드 호스팅(예: Streamlit Community Cloud)에서는 동작하지
   않으며, 그 환경에서는 버튼이 비활성화됩니다. 로컬에서 `streamlit run run.py`로
@@ -103,7 +140,7 @@ streamlit run run.py
 ### 3-2. 재현 검증 (논문 결과 재현)
 
 ```bash
-python -m pip install -r reproducibility/requirements.txt
+python -m pip install -r reproducibility/requirements-lock.txt
 python reproducibility/run_checks.py
 ```
 
@@ -111,9 +148,12 @@ python reproducibility/run_checks.py
 `experiments/E20_pipeline_contract_verification/` 및
 `experiments/E21_end_to_end_verification/` 아래에 기록합니다.
 
-- Python 3.13 또는 호환되는 Python 3에서 동작합니다.
-- 검증 실행에 필요한 패키지는 `reproducibility/requirements.txt`의 7개뿐입니다.
-  (GUI 없이 검증만 할 때 사용합니다.)
+- 검증에 필요한 패키지는 7개이며, `requirements-lock.txt`에 결과를 만든 환경의 정확한
+  버전을 적었습니다. 범위만 지정한 `reproducibility/requirements.txt`도 있으나, 논문과
+  같은 결과를 확인하려면 lock 파일을 쓰십시오.
+- 실행 전에 준비 상태를 자동으로 확인합니다. 교리 PDF가 Git LFS로 내려받아지지 않았거나,
+  PuLP에 최적화 계산기(CBC)가 없으면(PuLP 4.x) 시험을 시작하지 않고
+  `[SETUP ERROR]`로 해결 방법을 알려 줍니다.
 - Ollama 서버, Cesium 토큰 모두 필요 없습니다. E01은 결정론 규칙 라우터로 동작합니다.
 - E21은 공개 교리 PDF를 색인하므로 보고된 워크스테이션 기준 약 1분 걸립니다.
 

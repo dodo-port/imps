@@ -1,2 +1,4 @@
 # Bundled third-party doctrine PDFs are tracked with Git LFS
 *.pdf filter=lfs diff=lfs merge=lfs -text
+# Protocol files are hashed (SHA-256) by E20/E21; keep LF line endings on every OS
+experiments/**/verification_protocol.md text eol=lf

@@ -12,19 +12,21 @@ The experiments are implementation verification only. They do not validate opera
 ## Environment
 
 1. Install Python 3.13 or a compatible Python 3 version.
-2. Install the minimal reproduction dependencies:
+2. Install Git LFS and clone with `git clone` (not "Download ZIP"); the doctrine PDFs are stored with Git LFS.
+   On Windows, run `git config --global core.longpaths true` once before cloning.
+3. Install the exact package versions used for the committed results:
 
 ```powershell
-python -m pip install -r reproducibility/requirements.txt
+python -m pip install -r reproducibility/requirements-lock.txt
 ```
 
    (The full application has more dependencies in
    `mission_plan-new_plan_250519/requirements.txt`; they are not needed here.)
 
-3. A running Ollama server is **not** required. E01 uses a deterministic
+4. A running Ollama server is **not** required. E01 uses a deterministic
    rule-based command router; the `ollama` package is imported but not called.
 
-4. Optional Cesium terrain access uses the `CESIUM_ION_TOKEN` environment variable. No token is required for E20 or E21.
+5. Optional Cesium terrain access uses the `CESIUM_ION_TOKEN` environment variable. No token is required for E20 or E21.
 
 ## Run
 
@@ -34,7 +36,7 @@ From the repository root:
 python reproducibility/run_checks.py
 ```
 
-The runner executes E20 first and E21 second. E21 indexes the public doctrine PDFs and may take about one minute on the reported workstation.
+The runner first checks the setup (real doctrine PDFs, PuLP with the CBC solver) and stops with `[SETUP ERROR]` if either is missing. It then executes E20 first and E21 second. E21 indexes the public doctrine PDFs and may take about one minute on the reported workstation.
 
 ## Outputs
 
