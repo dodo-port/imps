@@ -1,0 +1,392 @@
+{
+  "generated_at_utc": "2026-09-28T02:07:31.330090+00:00",
+  "protocol_sha256": "563e66b724518cf199c9ee92046c5772afbd092041f98c22c72a7fe40cefb025",
+  "purpose": "module contract verification; not operational validation",
+  "test_history": [
+    {
+      "stage": "initial_suite_first_run",
+      "total": 10,
+      "passed": 8,
+      "failed_cases": [
+        "V02",
+        "P01"
+      ]
+    },
+    {
+      "stage": "expanded_suite_first_full_run",
+      "total": 11,
+      "passed": 9,
+      "failed_cases": [
+        "V07",
+        "P01"
+      ]
+    },
+    {
+      "stage": "post_fix_regression",
+      "total": 11,
+      "passed": 11,
+      "failed_cases": []
+    },
+    {
+      "stage": "technical_review_regression",
+      "total": 14,
+      "passed": 14,
+      "failed_cases": []
+    }
+  ],
+  "case_origin": {
+    "initial_suite": [
+      "F01",
+      "F02",
+      "F03",
+      "V01",
+      "V02",
+      "V03",
+      "V04",
+      "V05",
+      "V06",
+      "P01"
+    ],
+    "added_after_initial_run": [
+      "V07"
+    ],
+    "added_after_technical_review": [
+      "V08",
+      "V09",
+      "V10"
+    ],
+    "strengthened_after_defect_review": [
+      "F02",
+      "P01"
+    ]
+  },
+  "summary": {
+    "total": 14,
+    "passed": 14,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "case_id": "F01",
+      "category": "formation",
+      "expected": "all MILP constraints satisfied",
+      "observed": {
+        "result": {
+          "n_fighter": 1,
+          "n_recon_uav": 7,
+          "n_attack_uav": 1,
+          "total_cost": 28.0,
+          "status": "Optimal",
+          "solve_time_ms": 503.69,
+          "is_feasible": true,
+          "utilization": 75
+        },
+        "checks": {
+          "optimal": true,
+          "max_total": true,
+          "min_fighter": true,
+          "min_recon_uav": true,
+          "min_attack_uav": true,
+          "target_coverage": true,
+          "mumt_ratio": true
+        }
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "F02",
+      "category": "formation",
+      "expected": "infeasible condition is rejected",
+      "observed": {
+        "result": {
+          "n_fighter": 0,
+          "n_recon_uav": 2,
+          "n_attack_uav": 0,
+          "total_cost": 4.0,
+          "status": "Fallback(Infeasible)",
+          "solve_time_ms": 0.0,
+          "is_feasible": false,
+          "utilization": 200
+        },
+        "checks": {
+          "not_optimal": true,
+          "infeasible_flag": true,
+          "required_assets_exceed_limit": true
+        }
+      },
+      "passed": true,
+      "details": "ISR requires at least two reconnaissance UAVs while max_total is one."
+    },
+    {
+      "case_id": "F03",
+      "category": "assignment",
+      "expected": "valid asset objects and assignment fields",
+      "observed": {
+        "formation": {
+          "n_fighter": 1,
+          "n_recon_uav": 7,
+          "n_attack_uav": 1,
+          "mission_sequence": [
+            "ISR",
+            "SEAD",
+            "STRIKE"
+          ],
+          "assets": [
+            {
+              "asset_id": "F-01",
+              "asset_type": "fighter",
+              "callsign": "Eagle-1",
+              "base": "Osan",
+              "assigned_mission": "STRIKE",
+              "assigned_target_idx": 0,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-01",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-1",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-02",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-2",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-03",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-3",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-04",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-4",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-05",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-5",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-06",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-6",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-07",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-7",
+              "base": "Osan",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "AUAV-01",
+              "asset_type": "attack_uav",
+              "callsign": "Viper-1",
+              "base": "Osan",
+              "assigned_mission": "SEAD",
+              "assigned_target_idx": 1,
+              "path": []
+            }
+          ],
+          "total_cost": 28.0,
+          "is_feasible": true,
+          "solver_status": "Optimal",
+          "solve_time_ms": 26.44,
+          "utilization_pct": 75,
+          "total_assets": 9
+        },
+        "checks": {
+          "asset_count": true,
+          "mission_domain": true,
+          "target_index_domain": true
+        }
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V01",
+      "category": "validator",
+      "expected": "normal:no MISSION_SEQUENCE; violation:MISSION_SEQUENCE",
+      "observed": {
+        "normal": [],
+        "violation": [
+          "MISSION_SEQUENCE",
+          "SEAD_REQUIRED"
+        ]
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V02",
+      "category": "validator",
+      "expected": "outside:none; inside:NFZ_VIOLATION",
+      "observed": {
+        "outside": [],
+        "inside": [
+          "NFZ_VIOLATION"
+        ]
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V03",
+      "category": "validator",
+      "expected": "outside:none; inside:TARGET_IN_NFZ",
+      "observed": {
+        "outside": [],
+        "inside": [
+          "TARGET_IN_NFZ"
+        ]
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V04",
+      "category": "validator",
+      "expected": "500m:none; 100m:MIN_ALTITUDE",
+      "observed": {
+        "500m": [],
+        "100m": [
+          "MIN_ALTITUDE"
+        ]
+      },
+      "passed": true,
+      "details": "Flat-reference test without terrain input; MSL and AGL are equal in this condition."
+    },
+    {
+      "case_id": "V05",
+      "category": "validator",
+      "expected": "separated:none; identical:ASSET_COLLISION",
+      "observed": {
+        "separated": [],
+        "identical": [
+          "ASSET_COLLISION"
+        ]
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V06",
+      "category": "validator",
+      "expected": "1:2 none; 2:1 MUMT_RATIO",
+      "observed": {
+        "1fighter_2uav": [],
+        "2fighter_1uav": [
+          "MUMT_RATIO"
+        ]
+      },
+      "passed": true,
+      "details": ""
+    },
+    {
+      "case_id": "V07",
+      "category": "validator",
+      "expected": "MIN_ALTITUDE for 50m AGL under a 300m criterion",
+      "observed": {
+        "terrain_elevation_m": 450.0,
+        "path_alt_msl": 500.0,
+        "actual_agl_m": 50.0,
+        "rules": [
+          "MIN_ALTITUDE"
+        ]
+      },
+      "passed": true,
+      "details": "Terrain elevation is subtracted from MSL altitude before applying the AGL criterion."
+    },
+    {
+      "case_id": "V08",
+      "category": "validator_regression",
+      "expected": "NFZ_VIOLATION when endpoints are outside but the segment crosses the NFZ",
+      "observed": {
+        "endpoint_rules": [
+          [],
+          []
+        ],
+        "segment_rules": [
+          "NFZ_VIOLATION"
+        ]
+      },
+      "passed": true,
+      "details": "Added after technical review to prevent waypoint-only NFZ checks."
+    },
+    {
+      "case_id": "V09",
+      "category": "validator_regression",
+      "expected": "MIN_ALTITUDE when endpoints clear the criterion but the segment crosses a ridge",
+      "observed": {
+        "endpoint_agl_m": [
+          500.0,
+          500.0
+        ],
+        "ridge_elevation_m": 450.0,
+        "path_alt_msl": 500.0,
+        "segment_rules": [
+          "MIN_ALTITUDE"
+        ]
+      },
+      "passed": true,
+      "details": "Added after technical review; the segment is resampled at the 90 m DEM interval."
+    },
+    {
+      "case_id": "V10",
+      "category": "validator_regression",
+      "expected": "THREAT_PENETRATION when endpoints are clear but the segment crosses a high-risk area",
+      "observed": {
+        "endpoint_rules": [
+          [],
+          []
+        ],
+        "segment_rules": [
+          "THREAT_PENETRATION"
+        ]
+      },
+      "passed": true,
+      "details": "Added after technical review to prevent waypoint-only threat checks."
+    },
+    {
+      "case_id": "P01",
+      "category": "path_postprocess",
+      "expected": "no resampled segment point inside test obstacle",
+      "observed": {
+        "waypoint_count": 3,
+        "sample_count": 2459,
+        "intrusion_count": 0,
+        "intrusions": []
+      },
+      "passed": true,
+      "details": "Synthetic regression test for segment-level corner cutting after Chaikin smoothing."
+    }
+  ]
+}

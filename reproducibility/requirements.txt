@@ -1,0 +1,14 @@
+# Minimal dependencies to run the reproducibility checks (E20 + E21).
+# The full application (Streamlit UI, Earth Engine, 3D viz) has more
+# dependencies; see mission_plan-new_plan_250519/requirements.txt.
+#
+# E20/E21 do NOT require a running Ollama server: the E01 command router uses a
+# deterministic rule-based path. The `ollama` package is imported at module load
+# but not called during these checks.
+numpy>=1.24.0
+scipy>=1.11.0
+folium>=0.14.0
+pydantic>=2.0.0
+pypdf>=4.0.0
+pulp>=2.7.0
+ollama>=0.1.0

@@ -1,0 +1,291 @@
+{
+  "generated_at_utc": "2026-09-28T02:09:08.672207+00:00",
+  "protocol_sha256": "404a54605a394ff46d2c46e9c3e84bb8e49ad1266f2e31f71afbf7e8cfc3b2a4",
+  "purpose": "synthetic end-to-end implementation verification; not operational validation",
+  "front_end_scope": "deterministic natural-language command router; generative LLM excluded",
+  "scenario": {
+    "command": "MUM-T mission from Osan. target lat=37.30 lon=127.30. ISR SEAD STRIKE, 3D, RTB, safety margin 5 km, maximum 6 assets.",
+    "target": {
+      "name": "SYNTH-TGT-01",
+      "lat": 37.3,
+      "lon": 127.3
+    },
+    "max_total": 6,
+    "terrain": "flat synthetic 0 m MSL",
+    "threats": []
+  },
+  "runtime_s": 88.983,
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  },
+  "cases": [
+    {
+      "case_id": "E01",
+      "stage": "natural_language_router",
+      "expected": "all frozen parser fields match",
+      "observed": {
+        "checks": {
+          "action": true,
+          "deterministic_router": true,
+          "base": true,
+          "target_lat": true,
+          "target_lon": true,
+          "mission_sequence": true,
+          "algorithm": true,
+          "enable_3d": true,
+          "rtb": true,
+          "margin": true
+        },
+        "model_used": "fast-rule"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E02",
+      "stage": "doctrine_formation_assignment",
+      "expected": "nonempty doctrine references and feasible assignment within all fixed constraints",
+      "observed": {
+        "doctrine_policy": {
+          "mission_sequence": [
+            "ISR",
+            "SEAD",
+            "STRIKE"
+          ],
+          "min_fighter": 1,
+          "min_recon_uav": 2,
+          "min_attack_uav": 1,
+          "mumt_ratio": 2.0,
+          "utilization_rate": 0.65,
+          "max_recon_to_strike_ratio": 1.5,
+          "recon_bias_allowance": 1,
+          "safety_margin_floor_km": 5.0,
+          "refs": [
+            {
+              "source": "doctrine_basis.md",
+              "page": 1,
+              "score": 30.6436
+            },
+            {
+              "source": "dafman11-260.pdf",
+              "page": 45,
+              "score": 11.1941
+            },
+            {
+              "source": "FM_3-04-155.pdf",
+              "page": 180,
+              "score": 11.0718
+            },
+            {
+              "source": "fmi3-04-155.pdf",
+              "page": 180,
+              "score": 11.0718
+            },
+            {
+              "source": "3-03-AFDP-COUNTERLAND.pdf",
+              "page": 5,
+              "score": 10.3488
+            }
+          ],
+          "rationale": [
+            "임무 순서 교리 정규화: ISR -> SEAD -> STRIKE",
+            "SEAD/STRIKE 패키지에서 정찰 편중 제한을 적용합니다.",
+            "MUM-T 비율 기준: 유인 1 : 무인 2.00",
+            "안전 마진 하한: 5.0km"
+          ]
+        },
+        "formation": {
+          "n_fighter": 1,
+          "n_recon_uav": 2,
+          "n_attack_uav": 1,
+          "mission_sequence": [
+            "ISR",
+            "SEAD",
+            "STRIKE"
+          ],
+          "assets": [
+            {
+              "asset_id": "F-01",
+              "asset_type": "fighter",
+              "callsign": "Eagle-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "STRIKE",
+              "assigned_target_idx": 0,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-01",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-02",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-2",
+              "base": "오산(Osan)",
+              "assigned_mission": "ISR",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "AUAV-01",
+              "asset_type": "attack_uav",
+              "callsign": "Viper-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "SEAD",
+              "assigned_target_idx": null,
+              "path": []
+            }
+          ],
+          "total_cost": 18.0,
+          "is_feasible": true,
+          "solver_status": "Optimal",
+          "solve_time_ms": 107.04,
+          "utilization_pct": 67,
+          "total_assets": 4
+        },
+        "checks": {
+          "doctrine_refs_nonempty": true,
+          "policy_sequence": true,
+          "feasible": true,
+          "max_total": true,
+          "mumt_ratio": true,
+          "mission_domain": true
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E03",
+      "stage": "route_generation",
+      "expected": "all ingress routes exist and required endpoints are reached within 0.25 km",
+      "observed": {
+        "checks": {
+          "all_ingress_nonempty": true,
+          "fighter_target_reached": true,
+          "all_nonexpendable_rtb": true
+        },
+        "fighter_target_distance_km": [
+          0.0
+        ],
+        "rtb_distance_km": {
+          "F-01": 0.0,
+          "RUAV-01": 0.0,
+          "RUAV-02": 0.0
+        },
+        "waypoint_counts": {
+          "F-01": {
+            "in": 12,
+            "out": 12
+          },
+          "RUAV-01": {
+            "in": 11,
+            "out": 2
+          },
+          "RUAV-02": {
+            "in": 25,
+            "out": 16
+          },
+          "AUAV-01": {
+            "in": 12,
+            "out": 0
+          }
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E04",
+      "stage": "rule_checking",
+      "expected": "no ERROR and every expected rule family executed",
+      "observed": {
+        "checks": {
+          "no_errors": true,
+          "expected_rule_families": true
+        },
+        "report": {
+          "is_valid": true,
+          "error_count": 0,
+          "warning_count": 0,
+          "issues": [],
+          "checked_rules": [
+            "MISSION_SEQUENCE",
+            "TARGET_IN_NFZ",
+            "MUMT_RATIO",
+            "NFZ_F-01",
+            "THREAT_F-01",
+            "ALT_F-01",
+            "RANGE_F-01",
+            "NFZ_RUAV-01",
+            "THREAT_RUAV-01",
+            "ALT_RUAV-01",
+            "RANGE_RUAV-01",
+            "NFZ_RUAV-02",
+            "THREAT_RUAV-02",
+            "ALT_RUAV-02",
+            "RANGE_RUAV-02",
+            "NFZ_AUAV-01",
+            "THREAT_AUAV-01",
+            "ALT_AUAV-01",
+            "RANGE_AUAV-01",
+            "ASSET_COLLISION"
+          ],
+          "validate_time_ms": 27.35
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E05",
+      "stage": "output_generation",
+      "expected": "nonempty Folium and CZML outputs containing every asset",
+      "observed": {
+        "checks": {
+          "html_nonempty": true,
+          "czml_nonempty": true,
+          "all_asset_ids_in_czml": true
+        },
+        "html_bytes": 33112,
+        "czml_bytes": 38499,
+        "czml_packets": 15
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E06",
+      "stage": "infeasible_flow",
+      "expected": "infeasible formation stops before route/output generation",
+      "observed": {
+        "checks": {
+          "infeasible": true,
+          "no_assets": true,
+          "downstream_not_entered": true
+        },
+        "executed_stages": [
+          "formation"
+        ],
+        "formation": {
+          "n_fighter": 0,
+          "n_recon_uav": 0,
+          "n_attack_uav": 0,
+          "mission_sequence": [
+            "ISR"
+          ],
+          "assets": [],
+          "total_cost": 0.0,
+          "is_feasible": false,
+          "solver_status": "Infeasible",
+          "solve_time_ms": 0.0,
+          "utilization_pct": 0,
+          "total_assets": 0
+        }
+      },
+      "passed": true
+    }
+  ]
+}

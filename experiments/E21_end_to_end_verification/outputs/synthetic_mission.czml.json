@@ -1,0 +1,1463 @@
+[
+  {
+    "id": "document",
+    "name": "IMPS 임무 시뮬레이션",
+    "version": "1.0",
+    "clock": {
+      "interval": "2026-09-28T21:00:00Z/2026-09-28T22:10:46Z",
+      "currentTime": "2026-09-28T21:00:00Z",
+      "multiplier": 30,
+      "range": "LOOP_STOP",
+      "step": "SYSTEM_CLOCK_MULTIPLIER"
+    }
+  },
+  {
+    "id": "marker_base",
+    "name": "기지: 오산(Osan)",
+    "position": {
+      "cartographicDegrees": [
+        127.03,
+        37.09,
+        30.0
+      ]
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cG9seWdvbiBwb2ludHM9IjE2LDMgMzAsMjYgMiwyNiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNDQ4OEZGIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTYsOSAyNSwyNCA3LDI0IiAgZmlsbD0iIzQ0ODhGRiIgb3BhY2l0eT0iMC40Ii8+CiAgPHJlY3QgeD0iMTMiIHk9IjE5IiB3aWR0aD0iNiIgaGVpZ2h0PSI3IiBmaWxsPSIjNDQ4OEZGIiBvcGFjaXR5PSIwLjciLz4KPC9zdmc+",
+      "scale": 1.5,
+      "verticalOrigin": "BOTTOM",
+      "heightReference": "CLAMP_TO_GROUND"
+    },
+    "label": {
+      "text": "✈ 오산(Osan)",
+      "font": "bold 13px 'Segoe UI', sans-serif",
+      "fillColor": {
+        "rgba": [
+          100,
+          180,
+          255,
+          255
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          200
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "verticalOrigin": "TOP",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          10
+        ]
+      },
+      "heightReference": "CLAMP_TO_GROUND"
+    }
+  },
+  {
+    "id": "marker_target_primary",
+    "name": "목표: SYNTH-TGT-01",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        60.0
+      ]
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjE4IiByPSIxNSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRkYzMzMzIiBzdHJva2Utd2lkdGg9IjIuNSIvPgogIDxjaXJjbGUgY3g9IjE4IiBjeT0iMTgiIHI9IjkiICBmaWxsPSJub25lIiBzdHJva2U9IiNGRjMzMzMiIHN0cm9rZS13aWR0aD0iMiIvPgogIDxjaXJjbGUgY3g9IjE4IiBjeT0iMTgiIHI9IjMiICBmaWxsPSIjRkYzMzMzIi8+CiAgPGxpbmUgeDE9IjE4IiB5MT0iMyIgIHgyPSIxOCIgeTI9IjMzIiBzdHJva2U9IiNGRjMzMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjMiICB5MT0iMTgiIHgyPSIzMyIgeTI9IjE4IiBzdHJva2U9IiNGRjMzMzMiIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPg==",
+      "scale": 1.5,
+      "heightReference": "CLAMP_TO_GROUND"
+    },
+    "label": {
+      "text": "🎯 SYNTH-TGT-01",
+      "font": "bold 13px 'Segoe UI', sans-serif",
+      "fillColor": {
+        "rgba": [
+          255,
+          80,
+          80,
+          255
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          200
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "verticalOrigin": "TOP",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          12
+        ]
+      },
+      "heightReference": "CLAMP_TO_GROUND"
+    }
+  },
+  {
+    "id": "F-01",
+    "name": "Eagle-1 — SYNTH-TGT-01",
+    "availability": "2026-09-28T21:53:16Z/2026-09-28T21:59:02Z",
+    "position": {
+      "epoch": "2026-09-28T21:00:00Z",
+      "cartographicDegrees": [
+        3196.986451211003,
+        127.02151584650352,
+        37.081515754274136,
+        46.0,
+        3201.786555687287,
+        127.03,
+        37.09,
+        58.0,
+        3209.7862654507244,
+        127.04414025582747,
+        37.10414040954311,
+        627.6,
+        3217.7853946486325,
+        127.05828051165496,
+        37.11828081908623,
+        1180.1200000000001,
+        3233.430636162929,
+        127.03062500000001,
+        37.090625,
+        1500.0,
+        3234.430636162929,
+        127.03187500000001,
+        37.091875,
+        1500.0,
+        3235.4914149818264,
+        127.03375,
+        37.09375,
+        1500.0,
+        3236.9057708638093,
+        127.03625,
+        37.096250000000005,
+        1500.0,
+        3245.922249687723,
+        127.054375,
+        37.110625000000006,
+        1500.0,
+        3262.5487513541307,
+        127.08812499999999,
+        37.136875,
+        1500.0,
+        3286.781759973533,
+        127.1375,
+        37.175000000000004,
+        1500.0,
+        3318.6154544036253,
+        127.2025,
+        37.225,
+        1500.0,
+        3342.483562503769,
+        127.25125,
+        37.2625,
+        1500.0,
+        3358.39222163219,
+        127.28375,
+        37.287499999999994,
+        1500.0,
+        3366.345526891975,
+        127.3,
+        37.3,
+        1500.0,
+        3372.2953354901038,
+        127.29374999999999,
+        37.287499999999994,
+        1500.0,
+        3384.1953578006564,
+        127.28125,
+        37.2625,
+        1500.0,
+        3402.0464037619236,
+        127.2625,
+        37.225,
+        1500.0,
+        3425.8496875529254,
+        127.2375,
+        37.175000000000004,
+        1500.0,
+        3445.6370799615647,
+        127.208125,
+        37.136875,
+        1500.0,
+        3462.2635816279726,
+        127.174375,
+        37.110625000000006,
+        1500.0,
+        3477.138900811951,
+        127.13624999999999,
+        37.096250000000005,
+        1500.0,
+        3492.172711472551,
+        127.09375,
+        37.09375,
+        1500.0,
+        3503.4483932115822,
+        127.06187500000001,
+        37.091875,
+        1500.0,
+        3510.965668527903,
+        127.040625,
+        37.090625,
+        1500.0,
+        3523.2067054612908,
+        127.07522859705288,
+        37.09265848830454,
+        1063.8,
+        3532.00648286196,
+        127.0503528686738,
+        37.091196319737044,
+        453.12000000000006,
+        3539.2064263407374,
+        127.03,
+        37.09,
+        56.0,
+        3542.8064404708966,
+        127.0198235656631,
+        37.08940184013149,
+        46.0
+      ],
+      "interpolationAlgorithm": "LAGRANGE",
+      "interpolationDegree": 2,
+      "forwardExtrapolationType": "HOLD",
+      "backwardExtrapolationType": "HOLD"
+    },
+    "orientation": {
+      "velocityReference": "F-01#position"
+    },
+    "label": {
+      "text": "Eagle-1 [STRIKE]",
+      "font": "bold 12px 'Segoe UI', monospace",
+      "fillColor": {
+        "rgba": [
+          229,
+          57,
+          53,
+          240
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          230
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -28
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    },
+    "path": {
+      "show": [
+        {
+          "interval": "2026-09-28T21:53:16Z/2026-09-28T21:59:02Z",
+          "boolean": true
+        }
+      ],
+      "width": 3.5,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              229,
+              57,
+              53,
+              180
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 86400,
+      "resolution": 5
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj4KICA8cG9seWdvbiBwb2ludHM9IjIwLDMgMjUsMjIgMjAsMTggMTUsMjIiIGZpbGw9IiNFNTM5MzUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KICA8cG9seWdvbiBwb2ludHM9IjQsMjcgMjAsMTggMzYsMjcgMjAsMjMiIGZpbGw9IiNFNTM5MzUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxLjIiIG9wYWNpdHk9IjAuOSIvPgogIDxwb2x5Z29uIHBvaW50cz0iMTIsMzYgMjAsMjggMjgsMzYiIGZpbGw9IiNFNTM5MzUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIxNyIgcj0iMiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC42Ii8+Cjwvc3ZnPg==",
+      "scale": 1.8,
+      "verticalOrigin": "CENTER",
+      "horizontalOrigin": "CENTER",
+      "eyeOffset": {
+        "cartesian": [
+          0.0,
+          0.0,
+          -500.0
+        ]
+      },
+      "pixelOffsetScaleByDistance": {
+        "nearFarScalar": [
+          1000.0,
+          1.0,
+          1000000.0,
+          0.5
+        ]
+      }
+    }
+  },
+  {
+    "id": "missile_F-01",
+    "name": "AGM",
+    "availability": "2026-09-28T21:56:06Z/2026-09-28T21:56:14Z",
+    "position": {
+      "epoch": "2026-09-28T21:56:06Z",
+      "cartographicDegrees": [
+        0.0,
+        127.27622128032687,
+        37.28170867717451,
+        1500.0,
+        7.7940099220768655,
+        127.3,
+        37.3,
+        0.0
+      ],
+      "interpolationAlgorithm": "LINEAR"
+    },
+    "orientation": {
+      "velocityReference": "missile_F-01#position"
+    },
+    "model": {
+      "gltf": "data:model/gltf-binary;base64,Z2xURgIAAABkAwAAsAIAAEpTT057ImFzc2V0Ijp7InZlcnNpb24iOiIyLjAifSwic2NlbmUiOjAsInNjZW5lcyI6W3sibm9kZXMiOlswXX1dLCJub2RlcyI6W3sibWVzaCI6MH1dLCJtZXNoZXMiOlt7InByaW1pdGl2ZXMiOlt7ImF0dHJpYnV0ZXMiOnsiUE9TSVRJT04iOjB9LCJpbmRpY2VzIjoxLCJtYXRlcmlhbCI6MCwibW9kZSI6NH1dfV0sImFjY2Vzc29ycyI6W3siYnVmZmVyVmlldyI6MCwiY29tcG9uZW50VHlwZSI6NTEyNiwiY291bnQiOjksInR5cGUiOiJWRUMzIiwibWF4IjpbMC4zLDEuMCwwLjA1XSwibWluIjpbLTAuMywtMS4wLDAuMF19LHsiYnVmZmVyVmlldyI6MSwiY29tcG9uZW50VHlwZSI6NTEyMywiY291bnQiOjIxLCJ0eXBlIjoiU0NBTEFSIiwibWF4IjpbOF0sIm1pbiI6WzBdfV0sImJ1ZmZlclZpZXdzIjpbeyJidWZmZXIiOjAsImJ5dGVPZmZzZXQiOjAsImJ5dGVMZW5ndGgiOjEwOCwidGFyZ2V0IjozNDk2Mn0seyJidWZmZXIiOjAsImJ5dGVPZmZzZXQiOjEwOCwiYnl0ZUxlbmd0aCI6NDQsInRhcmdldCI6MzQ5NjN9XSwiYnVmZmVycyI6W3siYnl0ZUxlbmd0aCI6MTUyfV0sIm1hdGVyaWFscyI6W3sicGJyTWV0YWxsaWNSb3VnaG5lc3MiOnsiYmFzZUNvbG9yRmFjdG9yIjpbMS4wLDAuNjUsMC4wNSwxLjBdLCJtZXRhbGxpY0ZhY3RvciI6MC4yLCJyb3VnaG5lc3NGYWN0b3IiOjAuNn0sImRvdWJsZVNpZGVkIjp0cnVlfV19mAAAAEJJTgAAAAAAAACAPwAAAAApXI+9ZmYmPwAAAAApXI89ZmYmPwAAAAApXI+9AACAvwAAAAApXI89AACAvwAAAACamZm+mplZvwAAAACamZk+mplZvwAAAAApXI+9mpkZv83MTD0pXI89mpkZv83MTD0AAAIAAQABAAIABAABAAQAAwADAAUAAQAEAAIABgABAAMABwACAAgABAAAAA==",
+      "scale": 1.0,
+      "minimumPixelSize": 6,
+      "maximumScale": 3000,
+      "runAnimations": false
+    },
+    "path": {
+      "show": true,
+      "width": 2.5,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              255,
+              200,
+              40,
+              200
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 600,
+      "resolution": 1
+    }
+  },
+  {
+    "id": "explosion_main_F-01",
+    "name": "폭발: SYNTH-TGT-01",
+    "availability": "2026-09-28T21:56:14Z/2026-09-28T21:56:32Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        80.0
+      ]
+    },
+    "ellipsoid": {
+      "radii": {
+        "epoch": "2026-09-28T21:56:14Z",
+        "cartesian": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          800,
+          800,
+          300,
+          3,
+          3500,
+          3500,
+          1200,
+          6,
+          6000,
+          6000,
+          2500,
+          10,
+          4000,
+          4000,
+          1500,
+          18,
+          200,
+          200,
+          80
+        ],
+        "interpolationAlgorithm": "LINEAR"
+      },
+      "material": {
+        "solidColor": {
+          "color": {
+            "epoch": "2026-09-28T21:56:14Z",
+            "rgba": [
+              0,
+              255,
+              255,
+              100,
+              0,
+              0.3,
+              255,
+              200,
+              0,
+              240,
+              1.5,
+              255,
+              80,
+              0,
+              220,
+              4,
+              200,
+              60,
+              20,
+              180,
+              8,
+              90,
+              90,
+              90,
+              120,
+              18,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "fill": true
+    }
+  },
+  {
+    "id": "explosion_flash_F-01",
+    "name": "충격파",
+    "availability": "2026-09-28T21:56:14Z/2026-09-28T21:56:18Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        500.0
+      ]
+    },
+    "ellipsoid": {
+      "radii": {
+        "epoch": "2026-09-28T21:56:14Z",
+        "cartesian": [
+          0,
+          0,
+          0,
+          50,
+          0.5,
+          8000,
+          8000,
+          200,
+          2,
+          15000,
+          15000,
+          300,
+          4,
+          18000,
+          18000,
+          100
+        ],
+        "interpolationAlgorithm": "LINEAR"
+      },
+      "material": {
+        "solidColor": {
+          "color": {
+            "epoch": "2026-09-28T21:56:14Z",
+            "rgba": [
+              0,
+              255,
+              255,
+              255,
+              240,
+              0.5,
+              255,
+              200,
+              50,
+              180,
+              2,
+              255,
+              120,
+              0,
+              80,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "fill": true,
+      "outline": true,
+      "outlineColor": {
+        "rgba": [
+          255,
+          200,
+          50,
+          160
+        ]
+      },
+      "outlineWidth": 3.0
+    }
+  },
+  {
+    "id": "destroyed_F-01",
+    "name": "타격 완료",
+    "availability": "2026-09-28T21:56:14Z/2026-09-29T00:56:14Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        5.0
+      ]
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjE4IiByPSIxNiIgZmlsbD0icmdiYSgwLDAsMCwwLjU1KSIgc3Ryb2tlPSIjQ0MzMzMzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iOSIgeTE9IjkiIHgyPSIyNyIgeTI9IjI3IiBzdHJva2U9IiNGRjQ0NDQiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjI3IiB5MT0iOSIgeDI9IjkiIHkyPSIyNyIgc3Ryb2tlPSIjRkY0NDQ0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=",
+      "scale": 1.6,
+      "verticalOrigin": "CENTER",
+      "heightReference": "CLAMP_TO_GROUND",
+      "color": {
+        "rgba": [
+          220,
+          80,
+          80,
+          230
+        ]
+      }
+    },
+    "label": {
+      "text": "[타격 완료]",
+      "font": "bold 11px 'Segoe UI'",
+      "fillColor": {
+        "rgba": [
+          180,
+          60,
+          60,
+          220
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          200
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "verticalOrigin": "BOTTOM",
+      "heightReference": "CLAMP_TO_GROUND",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -18
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    }
+  },
+  {
+    "id": "RUAV-01",
+    "name": "Scout-1 — SYNTH-TGT-01 주변 정찰",
+    "availability": "2026-09-28T21:00:00Z/2026-09-28T21:40:04Z",
+    "position": {
+      "epoch": "2026-09-28T21:00:00Z",
+      "cartographicDegrees": [
+        0.0,
+        127.03109096735659,
+        37.093975687985655,
+        46.0,
+        8.099990285442265,
+        127.03,
+        37.09,
+        58.0,
+        152.10305996216738,
+        127.01060502477164,
+        37.0193211024773,
+        387.6,
+        260.1093891051824,
+        126.99605879335036,
+        36.966311929335276,
+        712.12,
+        537.658913461167,
+        126.95891844111587,
+        36.83005766277411,
+        900.0,
+        753.6589134611698,
+        126.95891844111587,
+        36.9385861967345,
+        1350.0,
+        918.8071279907691,
+        127.05479504214624,
+        36.90679892508973,
+        1350.0,
+        1084.1142253638952,
+        127.09450843060725,
+        36.83005766277411,
+        1350.0,
+        1249.445607894224,
+        127.05479504214624,
+        36.75331640045849,
+        1350.0,
+        1414.935540368373,
+        126.95891844111587,
+        36.72152912881372,
+        1350.0,
+        1580.4254728425221,
+        126.8630418400855,
+        36.75331640045849,
+        1350.0,
+        1745.7568553728509,
+        126.82332845162449,
+        36.83005766277411,
+        1350.0,
+        1911.0639527459768,
+        126.8630418400855,
+        36.90679892508973,
+        1350.0,
+        2076.212167275576,
+        126.95891844111587,
+        36.9385861967345,
+        1350.0,
+        2172.7415606847226,
+        126.9802428505239,
+        36.98399551400659,
+        643.8,
+        2301.489041664887,
+        127.00867550736739,
+        37.04456950600282,
+        285.12,
+        2398.0413547386834,
+        127.03,
+        37.09,
+        56.0,
+        2404.3413395885295,
+        127.0313914659289,
+        37.092964430883285,
+        46.0
+      ],
+      "interpolationAlgorithm": "LAGRANGE",
+      "interpolationDegree": 2,
+      "forwardExtrapolationType": "HOLD",
+      "backwardExtrapolationType": "HOLD"
+    },
+    "orientation": {
+      "velocityReference": "RUAV-01#position"
+    },
+    "label": {
+      "text": "Scout-1 [ISR]",
+      "font": "bold 12px 'Segoe UI', monospace",
+      "fillColor": {
+        "rgba": [
+          67,
+          160,
+          71,
+          240
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          230
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -28
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    },
+    "path": {
+      "show": [
+        {
+          "interval": "2026-09-28T21:00:00Z/2026-09-28T21:40:04Z",
+          "boolean": true
+        }
+      ],
+      "width": 2.5,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              67,
+              160,
+              71,
+              180
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 86400,
+      "resolution": 5
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI1IiBmaWxsPSIjNDNBMDQ3IiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIxMSIgeTI9IjE2IiBzdHJva2U9IiM0M0EwNDciIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iMjEiIHkxPSIxNiIgeDI9IjMwIiB5Mj0iMTYiIHN0cm9rZT0iIzQzQTA0NyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSIxNiIgeTE9IjIiIHgyPSIxNiIgeTI9IjExIiBzdHJva2U9IiM0M0EwNDciIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iMTYiIHkxPSIyMSIgeDI9IjE2IiB5Mj0iMzAiIHN0cm9rZT0iIzQzQTA0NyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPgo8L3N2Zz4=",
+      "scale": 1.8,
+      "verticalOrigin": "CENTER",
+      "horizontalOrigin": "CENTER",
+      "eyeOffset": {
+        "cartesian": [
+          0.0,
+          0.0,
+          -500.0
+        ]
+      },
+      "pixelOffsetScaleByDistance": {
+        "nearFarScalar": [
+          1000.0,
+          1.0,
+          1000000.0,
+          0.5
+        ]
+      }
+    }
+  },
+  {
+    "id": "RUAV-02",
+    "name": "Scout-2 — SYNTH-TGT-01 주변 정찰",
+    "availability": "2026-09-28T21:00:00Z/2026-09-28T22:01:32Z",
+    "position": {
+      "epoch": "2026-09-28T21:00:00Z",
+      "cartographicDegrees": [
+        0.0,
+        127.03407755964007,
+        37.09244619374988,
+        46.0,
+        8.099916501455363,
+        127.03,
+        37.09,
+        58.0,
+        44.10156575477444,
+        127.01187751271081,
+        37.07912802777834,
+        387.6,
+        80.10651302187952,
+        126.99375502542162,
+        37.06825605555667,
+        712.12,
+        133.4884563341167,
+        127.02062500000001,
+        37.084375,
+        900.0,
+        170.74041178523976,
+        127.00187500000001,
+        37.073125000000005,
+        900.0,
+        226.6249640851481,
+        126.97375,
+        37.056250000000006,
+        900.0,
+        301.15005235674823,
+        126.93624999999999,
+        37.03375,
+        900.0,
+        357.8715389452299,
+        126.90312499999999,
+        37.023125,
+        900.0,
+        403.62285520158366,
+        126.87437499999999,
+        37.024375,
+        900.0,
+        450.33723718800746,
+        126.85,
+        37.037499999999994,
+        750.0,
+        509.37090680512796,
+        126.83,
+        37.0625,
+        750.0,
+        584.361339321158,
+        126.80361480513947,
+        37.09375,
+        900.0,
+        675.3311239144222,
+        126.77084441541845,
+        37.13125000000001,
+        900.0,
+        782.2879030236509,
+        126.7316888308369,
+        37.175000000000004,
+        900.0,
+        905.2313091754619,
+        126.68614805139484,
+        37.225,
+        900.0,
+        997.4204290321176,
+        126.6519924668133,
+        37.2625,
+        900.0,
+        1058.8710591166719,
+        126.62922207709227,
+        37.287499999999994,
+        900.0,
+        1089.593738275619,
+        126.61783688223176,
+        37.3,
+        900.0,
+        1305.593738275622,
+        126.61783688223176,
+        37.408528533960386,
+        1350.0,
+        1470.739014458256,
+        126.71430931552162,
+        37.37674126231562,
+        1350.0,
+        1636.0459030621912,
+        126.7542695057854,
+        37.3,
+        1350.0,
+        1801.3774945420637,
+        126.71430931552162,
+        37.223258737684375,
+        1350.0,
+        1966.8703664144052,
+        126.61783688223176,
+        37.19147146603961,
+        1350.0,
+        2132.3632382867468,
+        126.5213644489419,
+        37.223258737684375,
+        1350.0,
+        2297.6948297666195,
+        126.48140425867811,
+        37.3,
+        1350.0,
+        2463.0017183705545,
+        126.5213644489419,
+        37.37674126231562,
+        1350.0,
+        2628.1469945531885,
+        126.61783688223176,
+        37.408528533960386,
+        1350.0,
+        2641.8234695402048,
+        126.61922207709227,
+        37.401745500587865,
+        1350.0,
+        2669.176514748672,
+        126.6219924668133,
+        37.388179433842815,
+        1350.0,
+        2710.2063206156627,
+        126.62614805139484,
+        37.367830333725244,
+        1350.0,
+        2764.913172717222,
+        126.63168883083692,
+        37.340698200235146,
+        1350.0,
+        2819.7994747523594,
+        126.64084441541846,
+        37.31409910011757,
+        1350.0,
+        2875.4781200662223,
+        126.65361480513948,
+        37.28803303337252,
+        1350.0,
+        2932.537605850811,
+        126.67,
+        37.262499999999996,
+        1250.0,
+        2991.5261616532443,
+        126.69,
+        37.237500000000004,
+        1250.0,
+        3066.150396592043,
+        126.72437499999998,
+        37.211875000000006,
+        1250.0,
+        3159.437049847671,
+        126.77312499999998,
+        37.185625,
+        1250.0,
+        3272.9395106431944,
+        126.83624999999998,
+        37.15875,
+        1250.0,
+        3407.521806341771,
+        126.91375000000002,
+        37.13125000000001,
+        1250.0,
+        3508.485322354492,
+        126.97187500000001,
+        37.110625000000006,
+        1250.0,
+        3575.8070866989433,
+        127.010625,
+        37.096875000000004,
+        1250.0,
+        3614.1365485196134,
+        126.98856194469846,
+        37.10470045532611,
+        643.8,
+        3653.731898619283,
+        127.01135287511431,
+        37.09661520489675,
+        285.12,
+        3686.130718014278,
+        127.03,
+        37.09,
+        56.0,
+        3692.430762649501,
+        127.03362582983888,
+        37.08871371015897,
+        46.0
+      ],
+      "interpolationAlgorithm": "LAGRANGE",
+      "interpolationDegree": 2,
+      "forwardExtrapolationType": "HOLD",
+      "backwardExtrapolationType": "HOLD"
+    },
+    "orientation": {
+      "velocityReference": "RUAV-02#position"
+    },
+    "label": {
+      "text": "Scout-2 [ISR]",
+      "font": "bold 12px 'Segoe UI', monospace",
+      "fillColor": {
+        "rgba": [
+          251,
+          140,
+          0,
+          240
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          230
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -28
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    },
+    "path": {
+      "show": [
+        {
+          "interval": "2026-09-28T21:00:00Z/2026-09-28T22:01:32Z",
+          "boolean": true
+        }
+      ],
+      "width": 2.5,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              251,
+              140,
+              0,
+              180
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 86400,
+      "resolution": 5
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8Y2lyY2xlIGN4PSIxNiIgY3k9IjE2IiByPSI1IiBmaWxsPSIjRkI4QzAwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIvPgogIDxsaW5lIHgxPSIyIiB5MT0iMTYiIHgyPSIxMSIgeTI9IjE2IiBzdHJva2U9IiNGQjhDMDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iMjEiIHkxPSIxNiIgeDI9IjMwIiB5Mj0iMTYiIHN0cm9rZT0iI0ZCOEMwMCIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxsaW5lIHgxPSIxNiIgeTE9IjIiIHgyPSIxNiIgeTI9IjExIiBzdHJva2U9IiNGQjhDMDAiIHN0cm9rZS13aWR0aD0iMi41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8bGluZSB4MT0iMTYiIHkxPSIyMSIgeDI9IjE2IiB5Mj0iMzAiIHN0cm9rZT0iI0ZCOEMwMCIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjE2IiBjeT0iMTYiIHI9IjIiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNyIvPgo8L3N2Zz4=",
+      "scale": 1.8,
+      "verticalOrigin": "CENTER",
+      "horizontalOrigin": "CENTER",
+      "eyeOffset": {
+        "cartesian": [
+          0.0,
+          0.0,
+          -500.0
+        ]
+      },
+      "pixelOffsetScaleByDistance": {
+        "nearFarScalar": [
+          1000.0,
+          1.0,
+          1000000.0,
+          0.5
+        ]
+      }
+    }
+  },
+  {
+    "id": "AUAV-01",
+    "name": "Viper-1 — SYNTH-TGT-01",
+    "availability": "2026-09-28T21:43:48Z/2026-09-28T21:52:06Z",
+    "position": {
+      "epoch": "2026-09-28T21:00:00Z",
+      "cartographicDegrees": [
+        2628.1469945531885,
+        127.02681844243882,
+        37.0868184078528,
+        46.0,
+        2633.5470386299958,
+        127.03,
+        37.09,
+        58.0,
+        2657.546167920307,
+        127.04414025582747,
+        37.10414040954311,
+        267.6,
+        2681.5435555140316,
+        127.05828051165496,
+        37.11828081908623,
+        478.12,
+        2728.4792800569217,
+        127.03062500000001,
+        37.090625,
+        600.0,
+        2730.600854704837,
+        127.03187500000001,
+        37.091875,
+        600.0,
+        2733.783191161529,
+        127.03375,
+        37.09375,
+        600.0,
+        2738.026258807477,
+        127.03625,
+        37.096250000000005,
+        600.0,
+        2765.0756952792185,
+        127.054375,
+        37.110625000000006,
+        600.0,
+        2814.9552002784417,
+        127.08812499999999,
+        37.136875,
+        600.0,
+        2887.6542261366485,
+        127.1375,
+        37.175000000000004,
+        600.0,
+        2983.1553094269257,
+        127.2025,
+        37.225,
+        600.0,
+        3054.7596337273567,
+        127.25125,
+        37.2625,
+        600.0,
+        3102.4856111126182,
+        127.28375,
+        37.287499999999994,
+        600.0,
+        3126.345526891975,
+        127.3,
+        37.3,
+        600.0
+      ],
+      "interpolationAlgorithm": "LAGRANGE",
+      "interpolationDegree": 2,
+      "forwardExtrapolationType": "HOLD",
+      "backwardExtrapolationType": "HOLD"
+    },
+    "orientation": {
+      "velocityReference": "AUAV-01#position"
+    },
+    "label": {
+      "text": "Viper-1 [SEAD]",
+      "font": "bold 12px 'Segoe UI', monospace",
+      "fillColor": {
+        "rgba": [
+          142,
+          36,
+          170,
+          240
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          230
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -28
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    },
+    "path": {
+      "show": [
+        {
+          "interval": "2026-09-28T21:43:48Z/2026-09-28T21:52:06Z",
+          "boolean": true
+        }
+      ],
+      "width": 2.5,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              142,
+              36,
+              170,
+              180
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 86400,
+      "resolution": 5
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCAwIDMyIDMyIj4KICA8cG9seWdvbiBwb2ludHM9IjE2LDIgMTksMjAgMTYsMTcgMTMsMjAiIGZpbGw9IiM4RTI0QUEiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+CiAgPHBvbHlnb24gcG9pbnRzPSI2LDIyIDE2LDE3IDI2LDIyIDE2LDIwIiBmaWxsPSIjOEUyNEFBIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgb3BhY2l0eT0iMC44Ii8+CiAgPHBvbHlnb24gcG9pbnRzPSIxMywzMCAxNiwyMyAxOSwzMCIgZmlsbD0iIzhFMjRBQSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjEiLz4KPC9zdmc+",
+      "scale": 1.8,
+      "verticalOrigin": "CENTER",
+      "horizontalOrigin": "CENTER",
+      "eyeOffset": {
+        "cartesian": [
+          0.0,
+          0.0,
+          -500.0
+        ]
+      },
+      "pixelOffsetScaleByDistance": {
+        "nearFarScalar": [
+          1000.0,
+          1.0,
+          1000000.0,
+          0.5
+        ]
+      }
+    }
+  },
+  {
+    "id": "missile_AUAV-01",
+    "name": "자폭 돌진",
+    "availability": "2026-09-28T21:52:06Z/2026-09-28T21:52:09Z",
+    "position": {
+      "epoch": "2026-09-28T21:52:06Z",
+      "cartographicDegrees": [
+        0.0,
+        127.3,
+        37.3,
+        600.0,
+        3.0,
+        127.3,
+        37.3,
+        0.0
+      ],
+      "interpolationAlgorithm": "LINEAR"
+    },
+    "orientation": {
+      "velocityReference": "missile_AUAV-01#position"
+    },
+    "model": {
+      "gltf": "data:model/gltf-binary;base64,Z2xURgIAAABkAwAAsAIAAEpTT057ImFzc2V0Ijp7InZlcnNpb24iOiIyLjAifSwic2NlbmUiOjAsInNjZW5lcyI6W3sibm9kZXMiOlswXX1dLCJub2RlcyI6W3sibWVzaCI6MH1dLCJtZXNoZXMiOlt7InByaW1pdGl2ZXMiOlt7ImF0dHJpYnV0ZXMiOnsiUE9TSVRJT04iOjB9LCJpbmRpY2VzIjoxLCJtYXRlcmlhbCI6MCwibW9kZSI6NH1dfV0sImFjY2Vzc29ycyI6W3siYnVmZmVyVmlldyI6MCwiY29tcG9uZW50VHlwZSI6NTEyNiwiY291bnQiOjksInR5cGUiOiJWRUMzIiwibWF4IjpbMC4zLDEuMCwwLjA1XSwibWluIjpbLTAuMywtMS4wLDAuMF19LHsiYnVmZmVyVmlldyI6MSwiY29tcG9uZW50VHlwZSI6NTEyMywiY291bnQiOjIxLCJ0eXBlIjoiU0NBTEFSIiwibWF4IjpbOF0sIm1pbiI6WzBdfV0sImJ1ZmZlclZpZXdzIjpbeyJidWZmZXIiOjAsImJ5dGVPZmZzZXQiOjAsImJ5dGVMZW5ndGgiOjEwOCwidGFyZ2V0IjozNDk2Mn0seyJidWZmZXIiOjAsImJ5dGVPZmZzZXQiOjEwOCwiYnl0ZUxlbmd0aCI6NDQsInRhcmdldCI6MzQ5NjN9XSwiYnVmZmVycyI6W3siYnl0ZUxlbmd0aCI6MTUyfV0sIm1hdGVyaWFscyI6W3sicGJyTWV0YWxsaWNSb3VnaG5lc3MiOnsiYmFzZUNvbG9yRmFjdG9yIjpbMS4wLDAuNjUsMC4wNSwxLjBdLCJtZXRhbGxpY0ZhY3RvciI6MC4yLCJyb3VnaG5lc3NGYWN0b3IiOjAuNn0sImRvdWJsZVNpZGVkIjp0cnVlfV19mAAAAEJJTgAAAAAAAACAPwAAAAApXI+9ZmYmPwAAAAApXI89ZmYmPwAAAAApXI+9AACAvwAAAAApXI89AACAvwAAAACamZm+mplZvwAAAACamZk+mplZvwAAAAApXI+9mpkZv83MTD0pXI89mpkZv83MTD0AAAIAAQABAAIABAABAAQAAwADAAUAAQAEAAIABgABAAMABwACAAgABAAAAA==",
+      "scale": 1.0,
+      "minimumPixelSize": 8,
+      "maximumScale": 2000,
+      "runAnimations": false
+    },
+    "path": {
+      "show": true,
+      "width": 3.0,
+      "material": {
+        "solidColor": {
+          "color": {
+            "rgba": [
+              255,
+              60,
+              20,
+              220
+            ]
+          }
+        }
+      },
+      "leadTime": 0,
+      "trailTime": 300,
+      "resolution": 1
+    }
+  },
+  {
+    "id": "explosion_main_AUAV-01",
+    "name": "폭발: SYNTH-TGT-01",
+    "availability": "2026-09-28T21:52:09Z/2026-09-28T21:52:23Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        80.0
+      ]
+    },
+    "ellipsoid": {
+      "radii": {
+        "epoch": "2026-09-28T21:52:09Z",
+        "cartesian": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          800,
+          800,
+          300,
+          3,
+          3500,
+          3500,
+          1200,
+          6,
+          6000,
+          6000,
+          2500,
+          10,
+          4000,
+          4000,
+          1500,
+          18,
+          200,
+          200,
+          80
+        ],
+        "interpolationAlgorithm": "LINEAR"
+      },
+      "material": {
+        "solidColor": {
+          "color": {
+            "epoch": "2026-09-28T21:52:09Z",
+            "rgba": [
+              0,
+              255,
+              255,
+              100,
+              0,
+              0.3,
+              255,
+              200,
+              0,
+              240,
+              1.5,
+              255,
+              80,
+              0,
+              220,
+              4,
+              200,
+              60,
+              20,
+              180,
+              8,
+              90,
+              90,
+              90,
+              120,
+              18,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "fill": true
+    }
+  },
+  {
+    "id": "explosion_flash_AUAV-01",
+    "name": "충격파",
+    "availability": "2026-09-28T21:52:09Z/2026-09-28T21:52:13Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        500.0
+      ]
+    },
+    "ellipsoid": {
+      "radii": {
+        "epoch": "2026-09-28T21:52:09Z",
+        "cartesian": [
+          0,
+          0,
+          0,
+          50,
+          0.5,
+          8000,
+          8000,
+          200,
+          2,
+          15000,
+          15000,
+          300,
+          4,
+          18000,
+          18000,
+          100
+        ],
+        "interpolationAlgorithm": "LINEAR"
+      },
+      "material": {
+        "solidColor": {
+          "color": {
+            "epoch": "2026-09-28T21:52:09Z",
+            "rgba": [
+              0,
+              255,
+              255,
+              255,
+              240,
+              0.5,
+              255,
+              200,
+              50,
+              180,
+              2,
+              255,
+              120,
+              0,
+              80,
+              4,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      },
+      "fill": true,
+      "outline": true,
+      "outlineColor": {
+        "rgba": [
+          255,
+          200,
+          50,
+          160
+        ]
+      },
+      "outlineWidth": 3.0
+    }
+  },
+  {
+    "id": "destroyed_AUAV-01",
+    "name": "파괴",
+    "availability": "2026-09-28T21:52:09Z/2026-09-29T00:52:09Z",
+    "position": {
+      "cartographicDegrees": [
+        127.3,
+        37.3,
+        5.0
+      ]
+    },
+    "billboard": {
+      "image": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzNiIgaGVpZ2h0PSIzNiIgdmlld0JveD0iMCAwIDM2IDM2Ij4KICA8Y2lyY2xlIGN4PSIxOCIgY3k9IjE4IiByPSIxNiIgZmlsbD0icmdiYSgwLDAsMCwwLjU1KSIgc3Ryb2tlPSIjQ0MzMzMzIiBzdHJva2Utd2lkdGg9IjIiLz4KICA8bGluZSB4MT0iOSIgeTE9IjkiIHgyPSIyNyIgeTI9IjI3IiBzdHJva2U9IiNGRjQ0NDQiIHN0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CiAgPGxpbmUgeDE9IjI3IiB5MT0iOSIgeDI9IjkiIHkyPSIyNyIgc3Ryb2tlPSIjRkY0NDQ0IiBzdHJva2Utd2lkdGg9IjQiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=",
+      "scale": 1.6,
+      "verticalOrigin": "CENTER",
+      "heightReference": "CLAMP_TO_GROUND",
+      "color": {
+        "rgba": [
+          220,
+          80,
+          80,
+          230
+        ]
+      }
+    },
+    "label": {
+      "text": "[파괴]",
+      "font": "bold 11px 'Segoe UI'",
+      "fillColor": {
+        "rgba": [
+          180,
+          60,
+          60,
+          220
+        ]
+      },
+      "outlineColor": {
+        "rgba": [
+          0,
+          0,
+          0,
+          200
+        ]
+      },
+      "outlineWidth": 2,
+      "style": "FILL_AND_OUTLINE",
+      "verticalOrigin": "BOTTOM",
+      "heightReference": "CLAMP_TO_GROUND",
+      "pixelOffset": {
+        "cartesian2": [
+          0,
+          -18
+        ]
+      },
+      "distanceDisplayCondition": {
+        "distanceDisplayCondition": [
+          0,
+          1500000.0
+        ]
+      }
+    }
+  }
+]

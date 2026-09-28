@@ -1,0 +1,10 @@
+E21 end-to-end verification
+
+PASS 6/6
+Runtime 88.983 s
+[PASS] E01 natural_language_router
+[PASS] E02 doctrine_formation_assignment
+[PASS] E03 route_generation
+[PASS] E04 rule_checking
+[PASS] E05 output_generation
+[PASS] E06 infeasible_flow

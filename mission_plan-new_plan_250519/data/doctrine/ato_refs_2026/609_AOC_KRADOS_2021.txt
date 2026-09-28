@@ -1,0 +1,312 @@
+﻿# 609th AOC optimizes ATO production, first to use KRADOS operationally
+Source: (local extraction path removed)
+Extracted: 2026-05-19
+
+---
+
+Skip to main content (Press Enter).
+
+Toggle navigation
+
+Air University (AU)
+
+Air University (AU)
+
+Search
+
+Search Air University: 
+
+Search
+
+Search Air University: 
+
+Search
+
+About AU
+
+Air University Commander
+
+Command & Leadership
+
+Board of Visitors
+
+That's Air University
+
+Air University Foundation
+
+News
+
+Around the Campus
+
+AF MAJCOM News
+
+Live Webcasts
+
+Academics
+
+Academic Affairs
+
+Registrar
+
+Doctrine Development and Education
+
+Curtis E. LeMay Center for Doctrine Development and Education
+
+Enlisted Education
+
+Thomas N. Barnes Center for Enlisted Education
+
+--Community College of the Air Force
+
+--Airman Leadership School
+
+--NCO Academy
+
+--Air Force Senior Non-Commissioned Officer Academy
+
+--USAF Chief Master Sergeant Leadership Course
+
+--Air Force Enlisted Heritage Research Institute
+
+--Enlisted PME Instructor Course
+
+Officer Education
+
+Squadron Officer School
+
+Air Command and Staff College
+
+Air War College
+
+eSchool of Graduate PME
+
+International Officer School
+
+School of Advanced Air and Space Studies
+
+Air Force Fellows
+
+Officer Accessions and Citizen Development
+
+Jeanne M. Holm Center for Officer Accessions & Citizen Development
+
+--Air Force Reserve Officer Training Corps
+
+--Air Force Junior Reserve Officer Training Corp
+
+--Officer Training School
+
+Leadership & Professional Development
+
+Ira C. Eaker Center for Leadership Development
+
+--Air Force Chaplain Corps College
+
+--Air Force First Sergeant Academy
+
+--Civilian Leadership Development School
+
+--Commanders School
+
+--Defense Financial Management & Comptroller School
+
+--Force Support Professional Development School
+
+--The Profession of Arms Center of Excellence (PACE)
+
+Academic Centers
+
+Air Force Culture and Language Center
+
+Air Force Cyber College
+
+Air Force Negotiation Center
+
+USAF Center for Strategic Deterrence Studies
+
+USAF Center for Strategic Leadership Communication
+
+USAF Center for Strategy and Technology
+
+Academic Services
+
+Air Force Institute of Technology
+
+Publications
+
+Air University Press
+
+Air & Space Power Journal (ASPJ)
+
+Strategic Studies Quarterly
+
+Journal of Indo-Pacific Affairs (JIPA)
+
+Journal of the Americas
+
+Revista Profesional de la Fuerza Aérea de EUA, Continente Americano
+
+Revista Profissional da Força Aérea dos EUA, Continente Americano
+
+Journal of Military Conflict Transformation (JMCT)
+
+Wild Blue Yonder Digital Journal
+
+Research
+
+Air University Library
+
+- AU Research
+
+- AU Research Topics
+
+- AU Student Support and Research Guides
+
+Air Force Historical Research Agency
+
+Research Search Engines
+
+China Aerospace Studies Institute
+
+Deterrence Research Knowledge Center
+
+ISR Research Task Force
+
+Human Research Protection Program
+
+Resources
+
+Air University Educational Support Services
+
+Getting Started Using Your CAC
+
+Air University Distance Learning
+
+Air University Portal (CaC Required)
+
+Air University Canvas Login
+
+Air Force Distance Learning
+
+Air Force Libraries (CAC Required)
+
+Air Force E-Learning (ADLS) (CAC Required)
+
+Air Force Virtual Education Center (AFVEC)
+
+Culture and Language Course
+
+Electronic WAPS Online Reference Library Database (eWORLD)(.mil Only)
+
+Teaching and Learning Center
+
+Flight Commander's Edge
+
+Squadron-Centered Learning
+
+Chaplain's Thought of the Week
+
+Chief of Staff of the Air Force Professional Reading List
+
+Diversity and Inclusion
+
+Heroes Welcome Alabama
+
+Health Care Services
+
+Lodging, Family, Food, Sports & Fitness
+
+Contact Us
+
+HomeNewsArticle Display
+
+609th AOC optimizes ATO production, first to use KRADOS operationally
+
+By Capt. Carrie Volpe, U.S. Air Force Central Public Affairs
+
+/ Published May 07, 2021
+
+PHOTO DETAILS
+ /  
+DOWNLOAD HI-RES
+
+1 of 1
+
+U.S. Air Forces Central Airmen work in the Combined Air Operations Center at Al Udeid Air Base, Qatar. AFCENT’s 609th Air Operations Center made history this week when it became the first AOC to operationally utilize the Kessel Run All Domain Operations Suite to plan and execute the Master Air Attack Plan. (U.S. Air Force photo by Staff Sgt. Dustin Mullen)
+
+PRINT | E-MAIL
+
+AL UDEID AIR BASE, Qatar (AFNS) -- U.S. Air Forces Central’s 609th Air Operations Center made history this week when it became the first AOC to operationally utilize the Kessel Run All Domain Operations Suite to plan and execute the Master Air Attack Plan.
+
+The KRADOS suite of applications, which was developed by the Air Force Life Cycle Management Center’s Detachment 12—also known as Kessel Run—is being implemented to phase out the legacy Theater Battle Management Core System, and is the future system for all AOCs across the Air Force.
+
+“This is an extremely important moment for the command and Air Force,” said Lt. Gen. Greg Guillot, 9th Air Force (Air Forces Central) commander. “Improving the Air Tasking Order process makes AFCENT and our distributed command and control capabilities more efficient, and this innovation will also help improve AOC operations across the Air Force and in other combatant commands.”
+
+KRADOS streamlines the ATO process by automating planning functions previously completed manually or through stand-alone systems or applications.
+
+“This is the biggest systems advancement the AOC has made since it first started using TBMCS in the 1990s,” said Col. Frederick Coleman, 609th AOC commander. “We’ve been utilizing KRADOS in a beta environment since December, and these warfighters helped take that beta system and bring it online. Today we are seeing it work operationally for the first time in our very own AOC.”
+
+Aside from streamlining the ATO process, KRADOS is vital when it comes to improving AFCENT’s ability to distribute operations from multiple locations, Coleman said.
+
+“There are three main lines of effort in distributed operations: people, systems and facilities,” he explained. “KRADOS is essential to the systems line of effort. Cloud-based, automated, connected systems are the heart of distributed ops. Legacy, localized systems like what we’ve been using anchor us to a fixed position and create a single point of failure.”
+
+The software improvement marks another innovation success for AFLCMC’s Kessel Run. With its user-centered approach to development, Kessel Run’s mission is to rapidly deliver combat capabilities to warfighters and revolutionize the Air Force software acquisition process. Since 2017, the 609th AOC has been using other applications from Kessel Run, including Jigsaw, their tanker planning app, and Slapshot, which builds the Master Air Attack Plan.
+
+In December, after receiving a request from the 609th AOC, Kessel Run delivered the KRADOS suite of nine applications, which the AOC has been beta-testing and using in tandem with the legacy system.
+
+“This is another benchmark for success in our efforts to modernize the AOC Weapon System,” said Col. Brian Beachkofski, Kessel Run commander. “We are committed in our efforts to take our users’ feedback and provide solutions to win tomorrow's fights, today. Our efforts are coming to fruition in a big way.”
+
+Although there is still work to do before KRADOS becomes fully operational in the 609th AOC, this is the first major step toward replacing TBMCS.
+
+“We are definitely moving in the right direction, and I look forward to KRADOS eventually being able to independently plan, produce and execute the ATO without using the legacy Master Air Attack Planning Toolkit or TBMCS,” Coleman said.
+
+FS
+
+USAF
+
+AF
+
+Air Force
+
+AFCENT
+
+U.S. Air Forces Central
+
+AFLCMC
+
+Air Force Life Cycle Management Center
+
+Air Operations Center
+
+KRADOS
+
+Kessel Run All Domain Operations Center
+
+Master Air Attack Plan
+
+Quick Links
+
+Home
+Site Index
+Contact Us
+AU Diversity & Inclusion
+IG
+RSS
+Questions
+AF Sites
+Accessibility
+EEO
+Link Disclaimer
+Small Business Support
+Strategic APR
+Suicide Prevention
+SAPR
+USA.gov
+No FEAR Act
+FOIA
+Join the Air Force
+OSI Tip Line
+
+Connect
+
+Official United States Air Force Website

@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Environments / secrets
+.env
+.venv/
+venv/
+env/
+
+# Editor / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs and scratch
+*.log
+scratch/
+tmp/
+
+# Do NOT commit large non-doctrine data (excluded from this release)
+mission_plan-new_plan_250519/data/models/
+mission_plan-new_plan_250519/data/terrain/
+mission_plan-new_plan_250519/docs/

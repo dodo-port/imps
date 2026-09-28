@@ -1,0 +1,17 @@
+E20 pipeline contract verification
+
+PASS 14/14
+[PASS] F01 formation: 
+[PASS] F02 formation: ISR requires at least two reconnaissance UAVs while max_total is one.
+[PASS] F03 assignment: 
+[PASS] V01 validator: 
+[PASS] V02 validator: 
+[PASS] V03 validator: 
+[PASS] V04 validator: Flat-reference test without terrain input; MSL and AGL are equal in this condition.
+[PASS] V05 validator: 
+[PASS] V06 validator: 
+[PASS] V07 validator: Terrain elevation is subtracted from MSL altitude before applying the AGL criterion.
+[PASS] V08 validator_regression: Added after technical review to prevent waypoint-only NFZ checks.
+[PASS] V09 validator_regression: Added after technical review; the segment is resampled at the 90 m DEM interval.
+[PASS] V10 validator_regression: Added after technical review to prevent waypoint-only threat checks.
+[PASS] P01 path_postprocess: Synthetic regression test for segment-level corner cutting after Chaikin smoothing.
