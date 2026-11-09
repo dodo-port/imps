@@ -168,10 +168,10 @@ axes[1].text(0.02, 0.02, tbl, transform=axes[1].transAxes, fontsize=7.3, color=I
              bbox=dict(fc="white", ec=GREY, lw=0.5, pad=2.5))
 
 handles = [
-    Line2D([], [], color=NAVY, lw=1.1, label="SEAD 자산 A* 경로(사후 점검에서 제외)"),
-    Line2D([], [], color=RED, marker="o", ls="none", ms=3, label="점검 위반: 위협 핵심영역"),
-    Line2D([], [], color=AMBER, marker="o", ls="none", ms=3, label="점검 위반: 최저고도(지면+200 m) 미달"),
-    Line2D([], [], color=GREEN, lw=1.4, ls="--", label="전투기 경로(표적을 덮는 위협 3기를 모두 제외한 사후 진단)"),
+    Line2D([], [], color=NAVY, lw=1.1, label="SEAD 자산 A* 경로(경로 산출 모듈의 선분 검사에서 제외)"),
+    Line2D([], [], color=RED, marker="o", ls="none", ms=3, label="선분 검사 위반: 위협 핵심영역"),
+    Line2D([], [], color=AMBER, marker="o", ls="none", ms=3, label="선분 검사 위반: 최저고도(지면+200 m) 미달"),
+    Line2D([], [], color=GREEN, lw=1.4, ls="--", label="전투기 진입 경로(표적을 덮는 위협 3기를 모두 제외한 사후 진단)"),
     Line2D([], [], color=GREY, lw=0.8, ls=":", label="회랑 진단 직선"),
     matplotlib.patches.Patch(fc=RED, alpha=0.15, label="위협 핵심영역(안전마진 8 km 기준)"),
 ]
