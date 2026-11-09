@@ -1,0 +1,69 @@
+{
+  "a_E22_SEAD_STRIKE_1target_max6": {
+    "feasible": true,
+    "status": "Optimal",
+    "counts": [
+      1,
+      2,
+      1
+    ],
+    "assets": [
+      [
+        "F-01",
+        "STRIKE",
+        0
+      ],
+      [
+        "RUAV-01",
+        "SEAD",
+        null
+      ],
+      [
+        "RUAV-02",
+        "SEAD",
+        null
+      ],
+      [
+        "AUAV-01",
+        "SEAD",
+        null
+      ]
+    ]
+  },
+  "b_STRIKE_3targets_max2": {
+    "feasible": false,
+    "status": "Infeasible",
+    "counts": [
+      0,
+      0,
+      0
+    ],
+    "assets": []
+  },
+  "c_ISR_CAS_3targets_max4": {
+    "feasible": true,
+    "status": "Optimal",
+    "counts": [
+      1,
+      2,
+      0
+    ],
+    "assets": [
+      [
+        "F-01",
+        "CAS",
+        0
+      ],
+      [
+        "RUAV-01",
+        "ISR",
+        1
+      ],
+      [
+        "RUAV-02",
+        "ISR",
+        2
+      ]
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "system_TerrainCacheFast": {
+    "result": "exception",
+    "type": "AttributeError",
+    "msg": "'TerrainCacheFast' object has no attribute 'get_elevation'"
+  },
+  "harness_TerrainCacheFastLoS": {
+    "result": "returned",
+    "points": 20
+  }
+}

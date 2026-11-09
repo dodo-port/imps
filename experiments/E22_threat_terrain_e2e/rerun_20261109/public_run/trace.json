@@ -1,0 +1,247 @@
+{
+  "app_tree": "<repo>\\mission_plan-new_plan_250519",
+  "module_file_path_computer": "<repo>\\mission_plan-new_plan_250519\\modules\\path_computer.py",
+  "terrain_dir_override": "<repo>/mission_plan-new_plan_250519/data/terrain",
+  "harness_return_code": 1,
+  "wall_s": 84.0964,
+  "harness_stdout": [
+    "[DEM] 지형 파일 2개 로딩 중...",
+    "  - 로드 성공: srtm_62_05.tif",
+    "  - 로드 성공: srtm_62_06.tif",
+    "[OK] TerrainCacheFast 초기화 완료 (2 tiles loaded)",
+    "{\"total\": 6, \"passed\": 4, \"failed\": 2}"
+  ],
+  "result_sha256_excluding_wallclock": "733d9ebdfdc0dfb48b0dadd192eb4f662f5ed96af615ae884a7e616d0eb5922f",
+  "trace_sha256_excluding_wallclock": "f8beac838834abeee4c1cf1c6ae03e36b2dbcd0cb0a34039816a23233d68cbaf",
+  "trace": {
+    "sead_target_mapping": {
+      "target_coord": [
+        39.03,
+        125.75
+      ],
+      "candidate_order_rule": "SAM before RADAR, then distance to target, then larger radius",
+      "mapping": {
+        "AUAV-01": "SA-13 (번개-2)",
+        "RUAV-01": "S-125 (번개-3)"
+      }
+    },
+    "assets": {
+      "F-01": {
+        "asset_type": "fighter",
+        "assigned_mission": "STRIKE",
+        "assigned_target_idx": null,
+        "objective_coord": [
+          39.03,
+          125.75
+        ],
+        "objective_threat_name": null,
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "threats_removed_for_this_asset": [
+          "S-125 (번개-3)",
+          "SA-13 (번개-2)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "node_limit_100k_exceeded"
+        ],
+        "smoothing_discards": 0,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      },
+      "RUAV-01": {
+        "asset_type": "recon_uav",
+        "assigned_mission": "SEAD",
+        "assigned_target_idx": null,
+        "objective_coord": [
+          39.0,
+          125.8
+        ],
+        "objective_threat_name": "S-125 (번개-3)",
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더",
+          "SA-13 (번개-2)"
+        ],
+        "threats_removed_for_this_asset": [
+          "S-125 (번개-3)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "reached_goal_within_3_cells"
+        ],
+        "smoothing_discards": 1,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      },
+      "AUAV-01": {
+        "asset_type": "attack_uav",
+        "assigned_mission": "SEAD",
+        "assigned_target_idx": 0,
+        "objective_coord": [
+          39.05,
+          125.7
+        ],
+        "objective_threat_name": "SA-13 (번개-2)",
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "threats_removed_for_this_asset": [
+          "SA-13 (번개-2)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "reached_goal_within_3_cells"
+        ],
+        "smoothing_discards": 1,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      }
+    },
+    "route_calls": [
+      {
+        "asset": "F-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          1511.0
+        ],
+        "end": [
+          39.03,
+          125.75,
+          1541.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "margin_km": 8.0,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.46,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 1.0,
+        "elapsed_s": 12.6398,
+        "stdout": [
+          "[WARN] 탐색 제한 초과 (100k nodes), 미도달 경로 폐기"
+        ],
+        "raw_waypoints": 0,
+        "termination": "node_limit_100k_exceeded"
+      },
+      {
+        "asset": "RUAV-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          911.0
+        ],
+        "end": [
+          39.0,
+          125.8,
+          921.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더",
+          "SA-13 (번개-2)"
+        ],
+        "margin_km": 8.0,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.46,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 1.0,
+        "elapsed_s": 6.6469,
+        "stdout": [],
+        "raw_waypoints": 34,
+        "termination": "reached_goal_within_3_cells"
+      },
+      {
+        "asset": "AUAV-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          611.0
+        ],
+        "end": [
+          39.05,
+          125.7,
+          631.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "margin_km": 1.2,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.528,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 0.9994,
+        "elapsed_s": 1.5959,
+        "stdout": [],
+        "raw_waypoints": 20,
+        "termination": "reached_goal_within_3_cells"
+      }
+    ],
+    "smooth_calls": [
+      {
+        "asset": "F-01",
+        "raw_len": 0,
+        "result_len": 0,
+        "discarded_after_smoothing": false
+      },
+      {
+        "asset": "RUAV-01",
+        "raw_len": 34,
+        "result_len": 0,
+        "discarded_after_smoothing": true
+      },
+      {
+        "asset": "AUAV-01",
+        "raw_len": 20,
+        "result_len": 0,
+        "discarded_after_smoothing": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "policy": {
+    "mission_sequence": [
+      "SEAD",
+      "STRIKE"
+    ],
+    "min_fighter": 1,
+    "min_recon_uav": 0,
+    "min_attack_uav": 1,
+    "mumt_ratio": 2.0,
+    "utilization_rate": 0.65,
+    "max_recon_to_strike_ratio": 1.5,
+    "recon_bias_allowance": 1,
+    "safety_margin_floor_km": 8.0
+  },
+  "n_hits": 8,
+  "hit_sources": [
+    [
+      "doctrine_basis.md",
+      1
+    ],
+    [
+      "dafman11-260.pdf",
+      45
+    ],
+    [
+      "FM_3-04-155.pdf",
+      172
+    ],
+    [
+      "fmi3-04-155.pdf",
+      172
+    ],
+    [
+      "DoD-UAS-2011-2036.pdf",
+      96
+    ],
+    [
+      "fmi3-04-155.pdf",
+      169
+    ],
+    [
+      "FM_3-04-155.pdf",
+      169
+    ],
+    [
+      "fm-1-100-army-aviation-operations.pdf",
+      18
+    ]
+  ],
+  "extracted_mumt_ratio_from_text": null,
+  "config_MUMT_RATIO_default": 2.0,
+  "extracted_margin_floor_from_text": null,
+  "input_current_margin_km": 8.0
+}

@@ -83,6 +83,11 @@ class TerrainCacheFast:
         self.cache[key] = 100.0
         return 100.0
 
+    def get_elevation(self, lat: float, lon: float) -> float:
+        """TerrainLoader와 같은 조회 이름. 가시선 계산(radar_shadow)이 이 이름으로 고도를 조회한다.
+        (2026-11-09 인터페이스 불일치 수정: 이전에는 이 메서드가 없어 위협 근처 A* 3D에서 오류가 났다.)"""
+        return self.get(lat, lon)
+
 
 class AStarPathfinder3DOptimized:
     """고속 A* 3D 경로탐색"""

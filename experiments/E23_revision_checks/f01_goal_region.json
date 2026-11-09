@@ -1,0 +1,17 @@
+{
+  "goal_grid": [
+    21,
+    60,
+    6
+  ],
+  "block_threshold": 0.45999999999999996,
+  "counts": {
+    "total": 93,
+    "terrain": 0,
+    "core": 41,
+    "risk": 52,
+    "open": 0,
+    "risk_046_050": 0
+  },
+  "open_nodes_sample": []
+}

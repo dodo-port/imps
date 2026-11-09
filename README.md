@@ -20,6 +20,10 @@ IMPS는 지휘관의 자연어 전술 명령 한 줄을 받아서, 교리에 근
 
 - **E20**: 14개 모듈 계약(contract)·회귀(regression) 시험
 - **E21**: 6단계 합성(synthetic) 종단(end-to-end) 워크플로
+- **E22**: 위협·실지형(SRTM) 종단 사례(고정 입력 1건)와 1차 리비전 재실행 기록
+  (`experiments/E22_threat_terrain_e2e/`, 재실행·기록 스크립트와 결과는 `rerun_20261109/`)
+- **E23**: 리비전 확인 실행(정책값 출처, 잔여 표적 분기, 전투기 도착 영역, 지형 캐시 인터페이스)
+- **E24**: 지형 캐시 인터페이스 회귀 항목 I01과 수정 후 E20 재실행 결과
 
 이 시험들은 구현이 논문 서술대로 계산하는지를 확인합니다. 실제 작전 임무의 품질이나,
 실측 방공 자료에 대한 위협 모델의 타당성을 검증하지는 **않습니다.** 즉 "코드가 설계대로
@@ -283,6 +287,8 @@ E21 실행 후 다음이 생성됩니다.
 | `mission_plan-new_plan_250519/modules/` | 소스 코드 |
 | `mission_plan-new_plan_250519/data/doctrine/` | E21 검색용 교리 문서 (서드파티, 아래 참고) |
 | `experiments/E20_*`, `experiments/E21_*` | 검증 스크립트, 입력, 기대 결과, 프로토콜 |
+| `experiments/E22_*` | 위협·실지형 종단 사례: 사전등록(`prereg.md`), 원 실행 결과, 재실행 기록(`rerun_20261109/`, 보충서 `prereg_addendum_20261109.md`) |
+| `experiments/E23_*`, `experiments/E24_*` | 리비전 확인 실행과 지형 캐시 인터페이스 회귀 항목 |
 | `reproducibility/` | 원커맨드 실행기, 체크리스트, 환경 안내 |
 
 ---
@@ -292,3 +298,21 @@ E21 실행 후 다음이 생성됩니다.
 소스 코드는 **MIT License**로 배포됩니다(`LICENSE` 참고). MIT License는 소스 코드에만
 적용됩니다. `mission_plan-new_plan_250519/data/doctrine/` 아래 문서는 각자의 조건으로
 재배포되는 서드파티 저작물입니다. `THIRD_PARTY_NOTICES.md`를 보십시오.
+
+---
+
+## 부록: E22 재실행 방법 (1차 리비전)
+
+E22는 SRTM 타일(위 6절)이 `mission_plan-new_plan_250519/data/terrain/`에 있어야 실행됩니다.
+
+```
+cd experiments/E22_threat_terrain_e2e/rerun_20261109
+python verify_e22_trace.py --out my_run            # 시험 스크립트의 연결 클래스 사용(원 실행과 같은 조건)
+python verify_e22_trace.py --out my_run_noshim --no-shim   # 시스템 지형 캐시 사용(인터페이스 수정 후)
+python analyze_e22_rerun.py                         # 원 결과와 비교
+```
+
+- 모듈 코드는 바꾸지 않고 경로 산출 모듈의 함수 5개를 실행 중에 감싸 입출력과 종료 사유만 기록합니다.
+- `--cf` 옵션의 실행은 사전등록에 없던 사후 진단입니다.
+- 결과 파일의 경로 표기는 공개를 위해 `<repo>`로 바꾸었습니다.
+

@@ -1,0 +1,20 @@
+{
+  "expected": "get_elevation exists and equals get; A* 3D near threats returns without exception",
+  "before_fix": {
+    "has_get_elevation": false,
+    "astar": {
+      "result": "exception",
+      "type": "AttributeError"
+    },
+    "passed": false
+  },
+  "after_fix": {
+    "has_get_elevation": true,
+    "equals_get": true,
+    "astar": {
+      "result": "returned",
+      "points": 20
+    },
+    "passed": true
+  }
+}

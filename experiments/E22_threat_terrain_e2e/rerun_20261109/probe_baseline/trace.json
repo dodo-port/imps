@@ -1,0 +1,430 @@
+{
+  "app_tree": "<repo>\\mission_plan-new_plan_250519",
+  "module_file_path_computer": "<repo>\\mission_plan-new_plan_250519\\modules\\path_computer.py",
+  "terrain_dir_override": null,
+  "counterfactual": null,
+  "harness_return_code": 1,
+  "wall_s": 112.0304,
+  "harness_stdout": [
+    "[DEM] 지형 파일 2개 로딩 중...",
+    "  - 로드 성공: srtm_62_05.tif",
+    "  - 로드 성공: srtm_62_06.tif",
+    "[OK] TerrainCacheFast 초기화 완료 (2 tiles loaded)",
+    "{\"total\": 6, \"passed\": 4, \"failed\": 2}"
+  ],
+  "result_sha256_excluding_wallclock": "db783ae02bbc95be39978c5fe5636f1fb4de1c8282ea450a4fab57fbd3ec2016",
+  "trace_sha256_excluding_wallclock": "398b58ee16fc2098e160232ac2a4fadf3d622e2a27f7e918990817e2ecc3c9de",
+  "trace": {
+    "sead_target_mapping": {
+      "target_coord": [
+        39.03,
+        125.75
+      ],
+      "candidate_order_rule": "SAM before RADAR, then distance to target, then larger radius",
+      "mapping": {
+        "AUAV-01": "SA-13 (번개-2)",
+        "RUAV-01": "S-125 (번개-3)"
+      }
+    },
+    "assets": {
+      "F-01": {
+        "asset_type": "fighter",
+        "assigned_mission": "STRIKE",
+        "assigned_target_idx": null,
+        "objective_coord": [
+          39.03,
+          125.75
+        ],
+        "objective_threat_name": null,
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "threats_removed_for_this_asset": [
+          "S-125 (번개-3)",
+          "SA-13 (번개-2)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "node_limit_100k_exceeded"
+        ],
+        "smoothing_discards": 0,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      },
+      "RUAV-01": {
+        "asset_type": "recon_uav",
+        "assigned_mission": "SEAD",
+        "assigned_target_idx": null,
+        "objective_coord": [
+          39.0,
+          125.8
+        ],
+        "objective_threat_name": "S-125 (번개-3)",
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더",
+          "SA-13 (번개-2)"
+        ],
+        "threats_removed_for_this_asset": [
+          "S-125 (번개-3)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "reached_goal_within_3_cells"
+        ],
+        "smoothing_discards": 1,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      },
+      "AUAV-01": {
+        "asset_type": "attack_uav",
+        "assigned_mission": "SEAD",
+        "assigned_target_idx": 0,
+        "objective_coord": [
+          39.05,
+          125.7
+        ],
+        "objective_threat_name": "SA-13 (번개-2)",
+        "threats_considered": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "threats_removed_for_this_asset": [
+          "SA-13 (번개-2)"
+        ],
+        "route_calls": 1,
+        "terminations": [
+          "reached_goal_within_3_cells"
+        ],
+        "smoothing_discards": 1,
+        "final_waypoints": {
+          "in": 0,
+          "out": 0
+        }
+      }
+    },
+    "route_calls": [
+      {
+        "asset": "F-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          1511.0
+        ],
+        "end": [
+          39.03,
+          125.75,
+          1541.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "margin_km": 8.0,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.46,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 1.0,
+        "elapsed_s": 13.0684,
+        "stdout": [
+          "[WARN] 탐색 제한 초과 (100k nodes), 미도달 경로 폐기"
+        ],
+        "raw_waypoints": 0,
+        "termination": "node_limit_100k_exceeded"
+      },
+      {
+        "asset": "RUAV-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          911.0
+        ],
+        "end": [
+          39.0,
+          125.8,
+          921.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "SNR-125 (LOW BLOW) 화력통제 레이더",
+          "SA-13 (번개-2)"
+        ],
+        "margin_km": 8.0,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.46,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 1.0,
+        "elapsed_s": 6.821,
+        "stdout": [],
+        "raw_waypoints": 34,
+        "termination": "reached_goal_within_3_cells"
+      },
+      {
+        "asset": "AUAV-01",
+        "call_index_for_asset": 0,
+        "algorithm": "A* 3D",
+        "start": [
+          37.09,
+          127.03,
+          611.0
+        ],
+        "end": [
+          39.05,
+          125.7,
+          631.0
+        ],
+        "threat_names": [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더",
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "margin_km": 1.2,
+        "fuel_state": 1.0,
+        "refuel_count": 0,
+        "cache_hit": false,
+        "risk_block_threshold": 0.528,
+        "start_inside_threat_core_of": [],
+        "start_risk": 0.0,
+        "end_inside_threat_core_of": [
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ],
+        "end_risk": 0.9994,
+        "elapsed_s": 1.6952,
+        "stdout": [],
+        "raw_waypoints": 20,
+        "termination": "reached_goal_within_3_cells"
+      }
+    ],
+    "smooth_calls": [
+      {
+        "asset": "F-01",
+        "raw_len": 0,
+        "result_len": 0,
+        "discarded_after_smoothing": false
+      },
+      {
+        "asset": "RUAV-01",
+        "raw_len": 34,
+        "result_len": 0,
+        "discarded_after_smoothing": true,
+        "raw_resampled_points": 4276,
+        "raw_failing_points": 537,
+        "failing_point_samples": [
+          {
+            "idx": 1678,
+            "of": 4276,
+            "point": [
+              38.4062,
+              126.955,
+              750.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 1679,
+            "of": 4276,
+            "point": [
+              38.4069,
+              126.9545,
+              750.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 1680,
+            "of": 4276,
+            "point": [
+              38.4076,
+              126.9539,
+              750.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 4273,
+            "of": 4276,
+            "point": [
+              39.0015,
+              125.7991,
+              916.0662
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          },
+          {
+            "idx": 4274,
+            "of": 4276,
+            "point": [
+              39.0007,
+              125.7996,
+              918.5331
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          },
+          {
+            "idx": 4275,
+            "of": 4276,
+            "point": [
+              39.0,
+              125.8,
+              921.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          }
+        ]
+      },
+      {
+        "asset": "AUAV-01",
+        "raw_len": 20,
+        "result_len": 0,
+        "discarded_after_smoothing": true,
+        "raw_resampled_points": 3024,
+        "raw_failing_points": 401,
+        "failing_point_samples": [
+          {
+            "idx": 1747,
+            "of": 3024,
+            "point": [
+              38.1418,
+              125.9666,
+              500.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 1748,
+            "of": 3024,
+            "point": [
+              38.1425,
+              125.966,
+              500.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 1749,
+            "of": 3024,
+            "point": [
+              38.1432,
+              125.9655,
+              500.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [],
+            "threat_core_of": []
+          },
+          {
+            "idx": 3021,
+            "of": 3024,
+            "point": [
+              39.0485,
+              125.6992,
+              630.4353
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          },
+          {
+            "idx": 3022,
+            "of": 3024,
+            "point": [
+              39.0492,
+              125.6996,
+              630.7177
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          },
+          {
+            "idx": 3023,
+            "of": 3024,
+            "point": [
+              39.05,
+              125.7,
+              631.0
+            ],
+            "terrain_collision": null,
+            "threat_collision_with": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ],
+            "threat_core_of": [
+              "S-125 (번개-3)",
+              "SNR-125 (LOW BLOW) 화력통제 레이더"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "T01": {
+    "raw": {
+      "start_base": "오산",
+      "target_city": "평양",
+      "mission_types": [
+        "SEAD",
+        "STRIKE"
+      ],
+      "mumt": true
+    },
+    "contract": {
+      "start": "오산(Osan)",
+      "target_name": "평양(평양)",
+      "target_coord": [
+        39.03,
+        125.75
+      ],
+      "mission_types": [
+        "SEAD",
+        "STRIKE"
+      ],
+      "mumt": true
+    },
+    "blocked": null,
+    "stages_in_output": [
+      "skipped"
+    ],
+    "log_head": []
+  },
+  "T06": {
+    "raw": {
+      "start_base": "Wonju",
+      "target_city": "Sinuiju",
+      "mission_types": [
+        "ISR",
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "contract": {
+      "start": "원주(Wonju)",
+      "target_name": null,
+      "target_coord": null,
+      "mission_types": [
+        "ISR",
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "blocked": "필수 제약 누락",
+    "stages_in_output": [
+      "blocked",
+      "stage1"
+    ],
+    "log_head": [
+      "[BLOCKED] 필수 제약(출발/목표/임무) 추출 실패 → 중단"
+    ]
+  },
+  "T10": {
+    "raw": {
+      "start_base": "Sacheon",
+      "target_city": "Hyesan",
+      "mission_types": [
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "contract": {
+      "start": "사천(Sacheon)",
+      "target_name": null,
+      "target_coord": null,
+      "mission_types": [
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "blocked": "필수 제약 누락",
+    "stages_in_output": [
+      "blocked",
+      "stage1"
+    ],
+    "log_head": [
+      "[BLOCKED] 필수 제약(출발/목표/임무) 추출 실패 → 중단"
+    ]
+  },
+  "T18": {
+    "raw": {
+      "start_base": "Wonju",
+      "target_city": "Kaesong",
+      "mission_types": [
+        "CAS",
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "contract": {
+      "start": "원주(Wonju)",
+      "target_name": null,
+      "target_coord": null,
+      "mission_types": [
+        "CAS",
+        "STRIKE"
+      ],
+      "mumt": false
+    },
+    "blocked": "필수 제약 누락",
+    "stages_in_output": [
+      "blocked",
+      "stage1"
+    ],
+    "log_head": [
+      "[BLOCKED] 필수 제약(출발/목표/임무) 추출 실패 → 중단"
+    ]
+  }
+}

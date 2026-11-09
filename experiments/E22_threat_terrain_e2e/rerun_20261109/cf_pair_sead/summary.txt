@@ -1,0 +1,13 @@
+E22 threat + terrain end-to-end regression
+
+PASS 4/6
+Runtime 109.270 s
+terrain use_fallback=False n_datasets=2
+[PASS] E01 natural_language_router
+[PASS] E02 doctrine_formation_assignment
+[FAIL] E03 route_generation_real_terrain
+[PASS] E04 rule_checking_real_threats
+[FAIL] E05 output_generation
+[PASS] E06 infeasible_flow
+naive count check: SEAD assigned=2 vs corridor open_at_k=2 -> consistent=True
+cross-module check: corridor_open=True routing_viable=False sead_targets_bound=False -> INCONSISTENCY_DETECTED=True

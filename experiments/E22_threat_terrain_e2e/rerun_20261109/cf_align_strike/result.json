@@ -1,0 +1,417 @@
+{
+  "generated_at_utc": "2026-11-08T23:00:18.401939+00:00",
+  "prereg_sha256": "fa27e202fb233c3073069e70a9ec4bd47f4553759ff3dc753e99d695b7a7ad7f",
+  "purpose": "threat + real-terrain end-to-end implementation verification; not operational validation",
+  "front_end_scope": "deterministic natural-language command router; generative LLM excluded",
+  "scenario": {
+    "command": "MUM-T mission from Osan. target lat=39.03 lon=125.75. SEAD STRIKE, 3D, RTB, safety margin 8 km, maximum 6 assets.",
+    "target": {
+      "name": "Pyongyang",
+      "lat": 39.03,
+      "lon": 125.75
+    },
+    "max_total": 6,
+    "terrain": {
+      "use_fallback": false,
+      "n_datasets": 2
+    },
+    "threats": [
+      {
+        "name": "S-75 (번개-1)",
+        "type": "SAM",
+        "lat": 38.4,
+        "lon": 126.35,
+        "radius_km": 30.0,
+        "alt": 0.0,
+        "loss": 21.1,
+        "rcs_m2": 2.5,
+        "pd_k": 0.4,
+        "sskp": 0.4,
+        "pk_peak_km": 0.35,
+        "pk_sigma_km": 0.2,
+        "weight": 1.0
+      },
+      {
+        "name": "SNR-75 (Fan Song) 화력제어 레이더",
+        "type": "RADAR",
+        "lat": 38.4,
+        "lon": 126.35,
+        "radius_km": 60.0,
+        "alt": 0.0,
+        "loss": 21.1,
+        "rcs_m2": 2.5,
+        "pd_k": 0.4,
+        "sskp": 0.0,
+        "pk_peak_km": 0.0,
+        "pk_sigma_km": 0.0,
+        "weight": 1.0
+      },
+      {
+        "name": "S-125 (번개-3)",
+        "type": "SAM",
+        "lat": 39.0,
+        "lon": 125.8,
+        "radius_km": 35.0,
+        "alt": 0.0,
+        "loss": 21.1,
+        "rcs_m2": 2.5,
+        "pd_k": 0.4,
+        "sskp": 0.7,
+        "pk_peak_km": 0.35,
+        "pk_sigma_km": 0.2,
+        "weight": 1.0
+      },
+      {
+        "name": "SNR-125 (LOW BLOW) 화력통제 레이더",
+        "type": "RADAR",
+        "lat": 39.0,
+        "lon": 125.8,
+        "radius_km": 40.0,
+        "alt": 0.0,
+        "loss": 21.1,
+        "rcs_m2": 2.5,
+        "pd_k": 0.4,
+        "sskp": 0.0,
+        "pk_peak_km": 0.0,
+        "pk_sigma_km": 0.0,
+        "weight": 1.0
+      },
+      {
+        "name": "SA-13 (번개-2)",
+        "type": "SAM",
+        "lat": 39.05,
+        "lon": 125.7,
+        "radius_km": 5.0,
+        "alt": 0.0,
+        "loss": 21.1,
+        "rcs_m2": 2.5,
+        "pd_k": 0.4,
+        "sskp": 0.4,
+        "pk_peak_km": 0.35,
+        "pk_sigma_km": 0.2,
+        "weight": 1.0
+      }
+    ],
+    "missing_threats": []
+  },
+  "runtime_s": 146.58,
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 2
+  },
+  "cases": [
+    {
+      "case_id": "E01",
+      "stage": "natural_language_router",
+      "expected": "all frozen parser fields match",
+      "observed": {
+        "checks": {
+          "action": true,
+          "deterministic_router": true,
+          "base": true,
+          "target_lat": true,
+          "target_lon": true,
+          "mission_sequence": true,
+          "algorithm": true,
+          "enable_3d": true,
+          "rtb": true,
+          "margin": true
+        },
+        "model_used": "fast-rule"
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E02",
+      "stage": "doctrine_formation_assignment",
+      "expected": "nonempty doctrine references and feasible assignment within all fixed constraints",
+      "observed": {
+        "doctrine_policy": {
+          "mission_sequence": [
+            "SEAD",
+            "STRIKE"
+          ],
+          "min_fighter": 1,
+          "min_recon_uav": 0,
+          "min_attack_uav": 1,
+          "mumt_ratio": 2.0,
+          "utilization_rate": 0.65,
+          "max_recon_to_strike_ratio": 1.5,
+          "recon_bias_allowance": 1,
+          "safety_margin_floor_km": 8.0,
+          "refs": [
+            {
+              "source": "doctrine_basis.md",
+              "page": 1,
+              "score": 29.6641
+            },
+            {
+              "source": "dafman11-260.pdf",
+              "page": 45,
+              "score": 13.5912
+            },
+            {
+              "source": "FM_3-04-155.pdf",
+              "page": 172,
+              "score": 12.5288
+            },
+            {
+              "source": "fmi3-04-155.pdf",
+              "page": 172,
+              "score": 12.5288
+            },
+            {
+              "source": "DoD-UAS-2011-2036.pdf",
+              "page": 96,
+              "score": 12.0918
+            }
+          ],
+          "rationale": [
+            "임무 순서 교리 정규화: SEAD -> STRIKE",
+            "SEAD/STRIKE 패키지에서 정찰 편중 제한을 적용합니다.",
+            "MUM-T 비율 기준: 유인 1 : 무인 2.00",
+            "안전 마진 하한: 8.0km"
+          ]
+        },
+        "formation": {
+          "n_fighter": 1,
+          "n_recon_uav": 1,
+          "n_attack_uav": 1,
+          "mission_sequence": [
+            "SEAD",
+            "STRIKE"
+          ],
+          "assets": [
+            {
+              "asset_id": "F-01",
+              "asset_type": "fighter",
+              "callsign": "Eagle-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "STRIKE",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "RUAV-01",
+              "asset_type": "recon_uav",
+              "callsign": "Scout-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "SEAD",
+              "assigned_target_idx": null,
+              "path": []
+            },
+            {
+              "asset_id": "AUAV-01",
+              "asset_type": "attack_uav",
+              "callsign": "Viper-1",
+              "base": "오산(Osan)",
+              "assigned_mission": "SEAD",
+              "assigned_target_idx": 0,
+              "path": []
+            }
+          ],
+          "total_cost": 16.0,
+          "is_feasible": true,
+          "solver_status": "Optimal",
+          "solve_time_ms": 485.15,
+          "utilization_pct": 50,
+          "total_assets": 3
+        },
+        "checks": {
+          "doctrine_refs_nonempty": true,
+          "policy_sequence": true,
+          "feasible": true,
+          "max_total": true,
+          "mumt_ratio": true,
+          "mission_domain": true
+        },
+        "n_threats": 5,
+        "missing_threats": []
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E03",
+      "stage": "route_generation_real_terrain",
+      "expected": "all ingress routes exist and required endpoints are reached within 0.25 km (real SRTM terrain)",
+      "observed": {
+        "checks": {
+          "all_ingress_nonempty": false,
+          "fighter_target_reached": true,
+          "all_nonexpendable_rtb": false
+        },
+        "fighter_target_distance_km": [
+          0.0
+        ],
+        "rtb_distance_km": {
+          "F-01": 0.0,
+          "RUAV-01": null
+        },
+        "waypoint_counts": {
+          "F-01": {
+            "in": 80,
+            "out": 80
+          },
+          "RUAV-01": {
+            "in": 0,
+            "out": 0
+          },
+          "AUAV-01": {
+            "in": 0,
+            "out": 0
+          }
+        },
+        "terrain_setup": {
+          "use_fallback": false,
+          "n_datasets": 2
+        }
+      },
+      "passed": false
+    },
+    {
+      "case_id": "E04",
+      "stage": "rule_checking_real_threats",
+      "expected": "rule engine executes all expected rule families and returns a verdict (pass/fail of the verdict itself, e.g. THREAT_PENETRATION ERRORs, is reported honestly below, not treated as harness failure)",
+      "observed": {
+        "checks": {
+          "report_produced": true,
+          "expected_rule_families": true
+        },
+        "report": {
+          "is_valid": true,
+          "error_count": 0,
+          "warning_count": 1,
+          "issues": [
+            {
+              "rule_id": "THREAT_PENETRATION",
+              "severity": "WARNING",
+              "asset_id": "F-01",
+              "message": "[F-01] threat-dominant segment (risk=0.50, threshold=0.50)",
+              "doctrine_ref": "JP3-30 ROE / FMI3-04.155",
+              "suggestion": "Increase safety margin above 13km or reroute with terrain masking."
+            }
+          ],
+          "checked_rules": [
+            "MISSION_SEQUENCE",
+            "TARGET_IN_NFZ",
+            "MUMT_RATIO",
+            "NFZ_F-01",
+            "THREAT_F-01",
+            "ALT_F-01",
+            "RANGE_F-01",
+            "NFZ_RUAV-01",
+            "THREAT_RUAV-01",
+            "ALT_RUAV-01",
+            "RANGE_RUAV-01",
+            "NFZ_AUAV-01",
+            "THREAT_AUAV-01",
+            "ALT_AUAV-01",
+            "RANGE_AUAV-01",
+            "ASSET_COLLISION"
+          ],
+          "validate_time_ms": 44412.54
+        }
+      },
+      "passed": true
+    },
+    {
+      "case_id": "E05",
+      "stage": "output_generation",
+      "expected": "nonempty Folium and CZML outputs containing every asset",
+      "observed": {
+        "checks": {
+          "html_nonempty": true,
+          "czml_nonempty": true,
+          "all_asset_ids_in_czml": false
+        },
+        "html_bytes": 33213,
+        "czml_bytes": 36517,
+        "czml_packets": 14
+      },
+      "passed": false
+    },
+    {
+      "case_id": "E06",
+      "stage": "infeasible_flow",
+      "expected": "infeasible formation stops before route/output generation",
+      "observed": {
+        "checks": {
+          "infeasible": true,
+          "no_assets": true,
+          "downstream_not_entered": true
+        },
+        "executed_stages": [
+          "formation"
+        ],
+        "formation": {
+          "n_fighter": 0,
+          "n_recon_uav": 0,
+          "n_attack_uav": 0,
+          "mission_sequence": [
+            "ISR"
+          ],
+          "assets": [],
+          "total_cost": 0.0,
+          "is_feasible": false,
+          "solver_status": "Infeasible",
+          "solve_time_ms": 0.0,
+          "utilization_pct": 0,
+          "total_assets": 0
+        }
+      },
+      "passed": true
+    }
+  ],
+  "cross_module_consistency": {
+    "post_registration_note": "cross_module_check added after observing E03 failure; 6 scored stages unchanged; naive count check kept for contrast",
+    "naive_count_check": {
+      "sead_assigned": 2,
+      "corridor_open_at_k": 2,
+      "consistent": true
+    },
+    "cross_module_check": {
+      "corridor_claims_open": true,
+      "routing_viable": false,
+      "sead_targets_bound": false,
+      "colocated_emitter_pairs": [
+        [
+          "S-75 (번개-1)",
+          "SNR-75 (Fan Song) 화력제어 레이더"
+        ],
+        [
+          "S-125 (번개-3)",
+          "SNR-125 (LOW BLOW) 화력통제 레이더"
+        ]
+      ],
+      "inconsistency_detected": true,
+      "reason": "corridor diagnostic reports open_reached after suppressing ['SNR-125 (LOW BLOW) 화력통제 레이더', 'S-125 (번개-3)'] (co-located emitter pair), but the routing module produced no viable path and the required SEAD suppressions are unbound (SEAD asset targets=[None, None])"
+    },
+    "corridor": {
+      "initial_max_risk": 1.0,
+      "tau": 0.5,
+      "initially_denied": true,
+      "suppression_trace": [
+        {
+          "step": 1,
+          "suppressed": "SNR-125 (LOW BLOW) 화력통제 레이더",
+          "risk_before": 1.0,
+          "risk_after": 0.6965
+        },
+        {
+          "step": 2,
+          "suppressed": "S-125 (번개-3)",
+          "risk_before": 0.6965,
+          "risk_after": 0.2969
+        }
+      ],
+      "suppressed_threats": [
+        "SNR-125 (LOW BLOW) 화력통제 레이더",
+        "S-125 (번개-3)"
+      ],
+      "open_reached": true,
+      "open_at_k": 2,
+      "final_max_risk": 0.2969
+    }
+  }
+}
